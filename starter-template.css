@@ -32,7 +32,9 @@ ul.nav.navbar-nav{
   vertical-align: top;
 }
 
-/* line up image and Text */
+/* line up image and Text 
+	Z-index 1 to bring to front, fixes links somehow...
+	z-index -1 to bring image to back. */
 .container-fluid{
 	position: relative;
 }
@@ -44,6 +46,7 @@ ul.nav.navbar-nav{
 	top:60%;
 	left:50%;
 	transform: translate(-50%, -50%);
+	z-index: 1;
 }
 
 img{
