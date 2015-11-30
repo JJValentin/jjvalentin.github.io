@@ -1,0 +1,78 @@
+/* Proper alignment of rows */
+html,body{ height:100%; margin:0; padding:0;}
+
+.container-fluid{
+	height:100%;
+	display:table;
+	width:100%;
+	padding:0;
+}
+
+.row-fluid{
+	height: 100%;
+	display: table-cell;
+	vertical-align:middle;
+}
+
+/* css from template*/
+.starter-template {
+  padding: 40px 15px;
+  text-align: center;
+}
+
+/* fixing navbar */
+div.container-fluid-nav{
+	margin-top: -3px;
+}
+
+@media(min-width: 768px){
+ul.nav.navbar-nav{
+	display: inline-block;
+  float: none;
+  vertical-align: top;
+}
+
+/* line up image and Text */
+.container-fluid{
+	position: relative;
+}
+
+.jumbotron.col-md-6.col-lg-6{
+	display: inline-block;
+	background-color:transparent;
+	position:absolute;
+	top:60%;
+	left:50%;
+	transform: translate(-50%, -50%);
+}
+
+img{
+	display:inline-block;
+	position:absolute;
+	top:35%;
+	left:150%;
+	transform: translate(-50%, -50%);
+	z-index: -1;
+}
+
+/* Align Navbar items */
+div#bs-example-navbar-collapse-1.collapse.navbar-collapse{
+	text-align:center;
+}}
+
+/* Custom Text */
+h1{
+	font-family:'Bangers';
+}
+
+li{
+	font-family:'Oswald';
+}
+
+/*ul{padding-left:0;}*/
+
+/* Links */
+a:link {color:#bb070e ; text-decoration: none;}      /* unvisited link */
+a:visited {color:#bb070e; text-decoration: none;}  /* visited link */
+a:hover {color:#0099f7 ; text-decoration: underline;}  /* mouse over link */
+a:active {color:#bb070e; text-decoration: underline;}  /* selected link */
