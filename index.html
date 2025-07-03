@@ -3,48 +3,226 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Strategic Growth Plan: Your Finance Channel</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Interactive Strategic Blueprint for CRE</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-    <div class="presentation-container">
-        <!-- Progress Bar -->
-        <div class="progress-bar">
-            <div class="progress-fill" id="progressFill"></div>
-        </div>
+<body class="bg-slate-50 text-slate-800">
 
-        <!-- Slide Container -->
-        <div class="slide-container" id="slideContainer">
-            <!-- Slides will be dynamically generated here -->
-        </div>
-
-        <!-- Navigation -->
-        <div class="navigation">
-            <button class="nav-btn nav-btn--prev" id="prevBtn">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M19 12H5M12 19l-7-7 7-7"/>
-                </svg>
-                <span>Previous</span>
-            </button>
-
-            <div class="slide-indicators" id="slideIndicators">
-                <!-- Indicators will be dynamically generated -->
+    <div class="flex min-h-screen">
+        <aside class="w-64 bg-slate-900 text-slate-200 p-6 fixed h-full shadow-2xl">
+            <h1 class="text-2xl font-bold text-white mb-2">First-Deal</h1>
+            <h2 class="text-sm font-light text-slate-400 mb-8">Strategic Blueprint</h2>
+            <nav id="main-nav">
+                <ul>
+                    <li><a href="#dashboard" class="nav-item flex items-center p-3 my-2 rounded-lg font-semibold active">
+                        <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
+                        Dashboard</a></li>
+                    <li><a href="#market" class="nav-item flex items-center p-3 my-2 rounded-lg font-semibold">
+                        <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
+                        Market Landscape</a></li>
+                    <li><a href="#customer" class="nav-item flex items-center p-3 my-2 rounded-lg font-semibold">
+                        <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                        Customer Deep Dive</a></li>
+                    <li><a href="#strategy" class="nav-item flex items-center p-3 my-2 rounded-lg font-semibold">
+                        <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                        Core Strategy</a></li>
+                    <li><a href="#gtm" class="nav-item flex items-center p-3 my-2 rounded-lg font-semibold">
+                        <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                        Go-to-Market Plan</a></li>
+                    <li><a href="#playbook" class="nav-item flex items-center p-3 my-2 rounded-lg font-semibold">
+                        <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                        Strategic Playbook</a></li>
+                </ul>
+            </nav>
+             <div class="absolute bottom-6 left-6 right-6 text-center text-slate-500 text-xs">
+                <p>&copy; 2025 Curtis Evans</p>
+                <p>Strategic Blueprint v5.0</p>
             </div>
+        </aside>
 
-            <button class="nav-btn nav-btn--next" id="nextBtn">
-                <span>Next</span>
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M5 12h14M12 5l7 7-7 7"/>
-                </svg>
-            </button>
-        </div>
+        <main class="ml-64 p-6 sm:p-8 md:p-12 w-full">
+            
+            <section id="dashboard" class="content-section active">
+                <div class="fade-in">
+                    <h1 class="text-4xl font-bold mb-2 text-slate-900">Executive Summary: The Opportunity</h1>
+                    <p class="text-lg text-slate-600 mb-8">A clear whitespace exists for a new market leader to emerge by shifting the CRE education paradigm from information to implementation.</p>
 
-        <!-- Slide Counter -->
-        <div class="slide-counter" id="slideCounter">
-            <span id="currentSlide">1</span> / <span id="totalSlides">14</span>
-        </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
+                        <div class="stat-card bg-white p-6 rounded-xl shadow-lg border border-slate-200">
+                            <h3 class="text-slate-500 font-semibold mb-2">Total Addressable Market</h3>
+                            <p class="text-4xl font-extrabold text-blue-800" id="stat-tam">0</p>
+                            <p class="text-slate-500 text-sm mt-1">U.S. Real Estate Education</p>
+                        </div>
+                        <div class="stat-card bg-white p-6 rounded-xl shadow-lg border border-slate-200">
+                            <h3 class="text-slate-500 font-semibold mb-2">Targetable Segment</h3>
+                            <p class="text-4xl font-extrabold text-blue-800" id="stat-segment">0</p>
+                             <p class="text-slate-500 text-sm mt-1">High-Earning Professionals</p>
+                        </div>
+                        <div class="stat-card bg-white p-6 rounded-xl shadow-lg border border-slate-200">
+                            <h3 class="text-slate-500 font-semibold mb-2">3-Year Revenue Goal</h3>
+                            <p class="text-4xl font-extrabold text-blue-800" id="stat-revenue">0</p>
+                             <p class="text-slate-500 text-sm mt-1">Based on Modest Market Capture</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-8 rounded-xl shadow-lg border border-slate-200">
+                         <h2 class="text-2xl font-bold mb-4">Core Strategic Insight</h2>
+                         <div class="prose max-w-none text-slate-700">
+                            <p>The market is saturated with information-based courses. The greatest opportunity lies in creating a new category: a <strong>performance-based CRE Deal Accelerator</strong>.</p>
+                            <p>This program will solve the market's #1 pain point—<strong>Capital & Funding Barriers (22% of complaints)</strong>—by providing a proprietary <strong>"Deal Operating System" (Deal OS)</strong> and a new, more sustainable <strong>Confidence & Credibility Guarantee</strong>.</p>
+                            <p>By shifting from selling information to delivering a tangible, guaranteed transformation in competence, this model justifies a premium price, attracts serious professionals, and creates a powerful, defensible moat in the marketplace.</p>
+                         </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="market" class="content-section">
+                <div class="fade-in">
+                    <h1 class="text-4xl font-bold mb-2 text-slate-900">Market Landscape</h1>
+                    <p class="text-lg text-slate-600 mb-8">Understanding the forces shaping the CRE education space and the critical gaps left by competitors.</p>
+
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                        <div class="bg-white p-8 rounded-xl shadow-lg border border-slate-200">
+                             <h2 class="text-2xl font-bold mb-4">The 8 Rings of Customer Pain</h2>
+                             <p class="text-slate-600 mb-4">Analysis of 820+ user quotes reveals that capital barriers are the most acute pain point, creating the primary strategic opening.</p>
+                             <div class="chart-container">
+                                 <canvas id="painPointChart"></canvas>
+                             </div>
+                             <div id="painPointDetail" class="mt-4 p-4 bg-slate-100 rounded-lg text-center h-24 flex items-center justify-center">
+                                 <p class="text-slate-600 italic">Click a segment to see the deeper pain.</p>
+                             </div>
+                        </div>
+                        <div class="bg-white p-8 rounded-xl shadow-lg border border-slate-200">
+                            <h2 class="text-2xl font-bold mb-4">Interactive Competitor Analysis</h2>
+                            <p class="text-slate-600 mb-6">Competitors sell information; they don't solve core implementation problems. Click a feature to see the strategic gap.</p>
+                            <div id="competitor-buttons" class="flex flex-wrap gap-2 mb-4">
+                                </div>
+                            <div id="competitor-detail-card" class="p-4 bg-slate-100 rounded-lg min-h-[200px]">
+                                 <p class="text-slate-600 italic">Select a feature above to analyze the opportunity.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="customer" class="content-section">
+                 <div class="fade-in">
+                    <h1 class="text-4xl font-bold mb-2 text-slate-900">Customer Deep Dive</h1>
+                    <p class="text-lg text-slate-600 mb-8">To win, we must understand the avatar's psyche and guide them up the Belief Ladder.</p>
+                    
+                    <div class="grid grid-cols-1 lg:grid-cols-5 gap-8">
+                        <div class="lg:col-span-2 bg-white p-8 rounded-xl shadow-lg border border-slate-200">
+                             <h2 class="text-2xl font-bold mb-4">Avatar: "Michael Chen"</h2>
+                             <div class="space-y-4 text-slate-700">
+                                 <p><strong>Age:</strong> 38</p>
+                                 <p><strong>Profession:</strong> Senior Software Engineer</p>
+                                 <p><strong>Income:</strong> ~$225k Household</p>
+                                 <p><strong>Capital:</strong> $150k Liquid</p>
+                                 <p><strong>Psychology:</strong> Data-driven, ambitious, but risk-averse and paralyzed by a fear of making a catastrophic mistake.</p>
+                                 <div class="p-4 bg-amber-50 border-l-4 border-amber-400 rounded-r-lg">
+                                     <p class="font-semibold text-amber-800">Core Internal Conflict:</p>
+                                     <p class="text-sm italic text-amber-700">"I've been working on this for quite a while now so I know the ins and outs, but I'm yet to close on anything for a lack of funding."</p>
+                                 </div>
+                            </div>
+                        </div>
+
+                        <div class="lg:col-span-3 bg-white p-8 rounded-xl shadow-lg border border-slate-200">
+                             <h2 class="text-2xl font-bold mb-4">The Belief Transformation Ladder</h2>
+                             <p class="text-slate-600 mb-6">Our marketing must systematically dismantle these limiting beliefs and install new, empowering ones. Click each rung to see the transformation.</p>
+                             <div class="space-y-3" id="belief-ladder">
+                                 </div>
+                        </div>
+                    </div>
+                 </div>
+            </section>
+            
+            <section id="strategy" class="content-section">
+                <div class="fade-in">
+                    <h1 class="text-4xl font-bold mb-2 text-slate-900">The Unfair Advantage: Core Strategy</h1>
+                    <p class="text-lg text-slate-600 mb-8">Our strategy is built on superior positioning, a unique mechanism, and a new, more sustainable guarantee.</p>
+
+                    <div class="space-y-8">
+                         <div class="bg-white p-8 rounded-xl shadow-lg border border-slate-200">
+                            <h2 class="text-3xl font-bold mb-3">Positioning: The Deal Accelerator</h2>
+                            <p class="text-slate-600">We will differentiate by positioning this not as a passive course, but as an active <strong>Deal Accelerator.</strong> This name implies momentum, implementation, and a focus on results, which directly counters the market's "analysis paralysis" problem.</p>
+                         </div>
+
+                         <div class="bg-white p-8 rounded-xl shadow-lg border border-slate-200">
+                              <h2 class="text-3xl font-bold mb-4">Unique Mechanism: The "Deal Operating System" (Deal OS)</h2>
+                              <p class="text-slate-600 mb-6">The Deal OS is our proprietary, step-by-step system that turns ambitious beginners into confident, fundable deal-makers. Click each module to learn more.</p>
+                              <div class="grid grid-cols-1 md:grid-cols-3 gap-6" id="deal-os">
+                                 </div>
+                         </div>
+                         
+                         <div class="bg-blue-800 text-white p-8 rounded-xl shadow-lg">
+                            <h2 class="text-3xl font-bold mb-3">The New Guarantee: The Confidence & Credibility Protocol</h2>
+                            <p class="opacity-90 mb-6">This revised guarantee is more sustainable and directly targets the avatar's core fear: lack of confidence. It guarantees their competence, which is the true value they seek.</p>
+                            <div id="guarantee-examples" class="space-y-4">
+                                 </div>
+                         </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="gtm" class="content-section">
+                 <div class="fade-in">
+                    <h1 class="text-4xl font-bold mb-2 text-slate-900">Go-to-Market Machine</h1>
+                    <p class="text-lg text-slate-600 mb-8">A phased content plan and a clear offer structure designed for authority and revenue growth.</p>
+
+                    <div class="bg-white p-8 rounded-xl shadow-lg border border-slate-200 mb-8">
+                         <h2 class="text-3xl font-bold mb-4">The Flagship Offer</h2>
+                         <div class="grid grid-cols-1 md:grid-cols-5 gap-8 items-center">
+                            <div class="md:col-span-3 prose max-w-none text-slate-700">
+                                 <p>Our flagship offer is a single, comprehensive program designed to deliver one outcome: <strong>the competence and confidence to close your first commercial real estate deal.</strong></p>
+                                 <p>This isn't a passive course; it's an active, hands-on accelerator that combines systematic education with real-world implementation and support.</p>
+                                 <ul>
+                                     <li>Complete access to the Deal OS.</li>
+                                     <li>Weekly group coaching & deal analysis calls.</li>
+                                     <li>A private community of professional peers.</li>
+                                     <li>The full Confidence & Credibility Guarantee.</li>
+                                 </ul>
+                                 <p class="mt-4">A future **Capital Partner** program will be available to graduates, offering them the opportunity to invest in exclusive, crowdfunded deals sourced by Curtis Evans.</p>
+                            </div>
+                            <div class="md:col-span-2 border-2 border-blue-800 p-6 rounded-lg bg-white shadow-2xl flex flex-col justify-center text-center">
+                                 <h3 class="text-xl font-bold text-blue-900">First-Deal Accelerator</h3>
+                                 <p class="text-5xl font-extrabold my-4 text-blue-800">$6,125</p>
+                                 <p class="text-slate-600 text-sm">A complete, outcome-focused investment to build the competence and confidence for your first deal, guaranteed.</p>
+                            </div>
+                         </div>
+                    </div>
+                 </div>
+            </section>
+            
+            <section id="playbook" class="content-section">
+                 <div class="fade-in">
+                    <h1 class="text-4xl font-bold mb-2 text-slate-900">Strategic Playbook</h1>
+                    <p class="text-lg text-slate-600 mb-8">Actionable frameworks and examples to guide execution.</p>
+                    
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                        <div class="bg-white p-8 rounded-xl shadow-lg border border-slate-200">
+                            <h2 class="text-2xl font-bold text-slate-900 mb-4">Playbook 1: The "Deal Ready" Low-Ticket Funnel</h2>
+                            <p class="text-slate-600 mb-6">This ascension model acquires customers profitably and qualifies them for the Accelerator. It solves micro-problems at each step to build trust and commitment.</p>
+                            <div id="funnel-stages" class="space-y-2">
+                                 </div>
+                        </div>
+
+                        <div class="bg-white p-8 rounded-xl shadow-lg border border-slate-200">
+                            <h2 class="text-2xl font-bold text-slate-900 mb-4">Playbook 2: Content Pillar Framework</h2>
+                            <p class="text-slate-600 mb-6">A framework for the initial "Foundation" phase content strategy, designed to build trust and address core pain points from day one. Click to see example video titles.</p>
+                             <div id="content-pillars-container" class="space-y-3">
+                                 </div>
+                        </div>
+                    </div>
+                 </div>
+            </section>
+        </main>
     </div>
 
-    <script src="app.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
