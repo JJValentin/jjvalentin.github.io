@@ -37,19 +37,66 @@ document.addEventListener('DOMContentLoaded', () => {
             { title: "Part 1: The 1-on-1 Deal Review", scenario: "You complete the Accelerator but still feel hesitant about your first offer. You're worried you've missed something in your analysis.", solution: "You invoke the guarantee. You schedule a private 1-on-1 session with Curtis to review your deal. He'll go through your underwriting line-by-line, pressure-test your assumptions, and give you the clear 'go' or 'no-go' decision with his expert reasoning. You leave with absolute clarity and confidence." },
             { title: "Part 2: The 'Blueprint-Backed' Credibility Seal", scenario: "You're ready to make an offer, but you're concerned brokers won't take you seriously as a new investor.", solution: "Because your offer was built using the Deal OS and reviewed by Curtis, you can submit it with the 'Blueprint-Backed' seal. This tells brokers and sellers that your offer has been vetted by an experienced professional, giving you instant credibility and a higher likelihood of being accepted." }
         ],
-        funnel: [
-            { stage: 'Front-End Offer', price: '$37', title: 'The "90-Minute Deal Calculator"', promise: 'Confidently analyze any CRE listing in under 90 minutes.' },
-            { stage: 'Order Bump', price: '+$17', title: 'Debt Service Script Pack', promise: 'Get a term sheet from a local lender within 48 hours.' },
-            { stage: 'One-Time Offer 1', price: '$197', title: 'Off-Market Deal-Finding System', promise: 'Find deals that brokers never list publicly.' },
-            { stage: 'One-Time Offer 2', price: '$997', title: '"Numbers to LOI" Live Sprint', promise: 'Go from analysis to a submitted Letter of Intent in 4 weeks with personal feedback.' },
-            { stage: 'Core Offer', price: 'Application', title: 'First-Deal Accelerator', promise: 'Get your first deal funded and closed.' }
-        ],
+        funnel: {
+            prices: { fe: 37, bump1: 17, bump2: 10, upsell1: 197, upsell2: 997, accelerator: 4995 },
+            defaults: { traffic: 1000, fe_cvr: 4, bump1_take: 30, bump2_take: 25, upsell1_cvr: 10, upsell2_cvr: 15, accelerator_cvr: 5 }
+        },
         contentPillars: [
             { title: 'First-Deal Frameworks (40%)', purpose: 'Builds authority by teaching core, step-by-step processes. Directly addresses the "Knowledge Gap" pain point.', examples: ['5 Steps to Buying Your First Commercial Property (Beginner\'s Guide)', 'How to Analyze a Commercial Deal in Under 30 Minutes', 'The Ultimate Due Diligence Checklist for Your First Property'] },
             { title: 'Real Deal Reveals (25%)', purpose: 'Builds trust through radical transparency. Showcasing actual deals (wins and losses) proves you are a practitioner, not a performer.', examples: ['How I Made $120K on One Vacancy: A Complete Deal Breakdown', 'My $50,000 Mistake: The Worst Deal I Ever Did & The Lesson It Taught Me', 'From Start to Finish: The True Story of My First 12-Unit Building'] },
             { title: 'Capital & Funding Mastery (15%)', purpose: 'Directly targets the #1 pain point. This content attracts the most motivated prospects.', examples: ['3 Ways to Fund Your First Deal When Banks Say No', 'How to Raise Private Money for CRE (Without Feeling Like a Salesman)', 'The Truth About How Much Money You REALLY Need'] },
             { title: 'Market Hot-Takes & Myth Busting (10%)', purpose: 'Drives engagement and shareability by providing timely, opinionated commentary that counters common (and often wrong) advice.', examples: ['Why the "CRE Crash" is a Lie (And Where the Real Opportunity Is)', 'The Cap Rate Myth That Costs Beginners Millions', 'Yes, Rates are 7%. Here\'s How to Cash Flow Anyway.'] },
             { title: 'Lifestyle & Mindset (10%)', purpose: 'Humanizes the brand and makes you relatable. This content addresses the "Personal Stress" pain point.', examples: ['How I Manage a $50M Portfolio in 5 Hours a Week', 'The Mindset Shift from W-2 Employee to Real Estate Investor', 'From Analysis Paralysis to Your First Offer: A Mental Framework'] }
+        ],
+        capitalFunnel: [
+            { 
+                stage: 'Front-End Product', 
+                name: 'The 7-Day Funding Credibility Kit', 
+                price: '$27',
+                description: 'A micro-transformation product designed to solve the immediate problem of not being taken seriously by lenders or partners.',
+                includes: ['The "Pro-Level" One-Page Deal Summary template', 'The "Experience Translator" Script for W-2 professionals', 'Top 5 Lender Questions Cheat Sheet'],
+                justification: 'Directly attacks the belief "You won\'t get funding without experience" and creates immediate credibility.'
+            },
+            {
+                stage: 'Order Bump 1',
+                name: 'The Private Lender Rolodex & CRM',
+                price: '+$27',
+                description: 'Instantly solves the "who do I talk to?" problem created by the FE offer.',
+                includes: ['Categorized list of alternative funding sources', 'Pre-built Trello/Notion CRM template for tracking conversations'],
+                justification: 'Speed-based upsell that saves weeks of research and makes the FE product immediately actionable.'
+            },
+            {
+                stage: 'Order Bump 2',
+                name: 'The Funding Objection Shield',
+                price: '+$17',
+                description: 'Word-for-word scripts for handling the most common funding objections in high-interest-rate markets.',
+                includes: ['Scripts for "Rates are too high" objections', 'Responses to market uncertainty concerns', 'First-time investor credibility boosters'],
+                justification: 'Makes the avatar better than other beginners by handling objections confidently.'
+            },
+            {
+                stage: 'Upsell 1',
+                name: 'The 7% Rate Deal-Finding System',
+                price: '$97',
+                description: 'Comprehensive system for finding and analyzing profitable deals in today\'s high-rate market.',
+                includes: ['Cash-Flow-in-Any-Market Underwriting Model', 'Finding Motivated Sellers strategies', '3 Creative Financing Structures'],
+                justification: 'Essential next step - funding credibility is useless without viable deals that stand up to scrutiny.'
+            },
+            {
+                stage: 'Upsell 2',
+                name: 'The Automated Deal-Flow Toolkit',
+                price: '$67',
+                description: 'Done-for-you templates and strategies for consistent deal pipeline without manual work.',
+                includes: ['Broker Whisperer Email Pack', 'Off-Market Machine setup guide', 'Advanced Deal-Tracking Dashboard'],
+                justification: 'Offers a different way through automation and systems, appealing to data-driven professionals.'
+            },
+            {
+                stage: 'High-Ticket VSL',
+                name: 'First-Deal Accelerator Application',
+                price: '$4,995+',
+                description: 'Implementation partnership with 6-month deal guarantee and co-investment options.',
+                includes: ['Expert partnership through every step', 'Access to funding network', 'Risk-sharing co-investment', '6-month guaranteed timeline'],
+                justification: 'Bridges the execution gap - transforms knowledge into real-world results with expert guidance.'
+            }
         ]
     };
 
@@ -239,7 +286,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <p class="text-slate-600 mb-4">${item.goal}</p>
                  <div class="details mt-4 pt-4 border-t border-slate-200">
                     <p class="text-sm text-slate-700">${item.process}</p>
-                 </div>
+                </div>
             </div>
         `).join('');
         
@@ -262,19 +309,101 @@ document.addEventListener('DOMContentLoaded', () => {
         `).join('');
     }
     
-    function renderFunnel() {
-        const container = document.getElementById('funnel-stages');
-        container.innerHTML = appData.funnel.map((item, index) => `
-            <div class="p-4 rounded-lg ${index === appData.funnel.length - 1 ? 'bg-blue-100 border-blue-300' : 'bg-slate-100 border-slate-200'} border">
-                <div class="flex justify-between items-baseline">
-                    <h4 class="font-bold text-blue-900">${item.stage}: ${item.title}</h4>
-                    <span class="text-sm font-bold text-blue-800">${item.price}</span>
+    function renderRevenueCalculator() {
+        const container = document.getElementById('revenue-calculator-container');
+        const { prices, defaults } = appData.funnel;
+
+        container.innerHTML = `
+            <div class="space-y-4 mb-6">
+                <!-- Input Controls -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
+                    <div>
+                        <label for="traffic" class="font-semibold text-slate-700">Traffic (Clicks)</label>
+                        <input type="number" id="traffic" value="${defaults.traffic}" class="mt-1 w-full p-2 border border-slate-300 rounded-md">
+                    </div>
+                    <div>
+                        <label for="fe_cvr" class="font-semibold text-slate-700">FE CVR (<span id="fe_cvr_val">${defaults.fe_cvr}</span>%)</label>
+                        <input type="range" id="fe_cvr" min="1" max="10" value="${defaults.fe_cvr}" class="mt-1 w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer">
+                    </div>
+                     <div>
+                        <label for="upsell1_cvr" class="font-semibold text-slate-700">Upsell 1 CVR (<span id="upsell1_cvr_val">${defaults.upsell1_cvr}</span>%)</label>
+                        <input type="range" id="upsell1_cvr" min="5" max="25" value="${defaults.upsell1_cvr}" class="mt-1 w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer">
+                    </div>
+                    <div>
+                        <label for="accelerator_cvr" class="font-semibold text-slate-700">Accelerator CVR (<span id="accelerator_cvr_val">${defaults.accelerator_cvr}</span>%)</label>
+                        <input type="range" id="accelerator_cvr" min="1" max="15" value="${defaults.accelerator_cvr}" class="mt-1 w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer">
+                    </div>
                 </div>
-                <p class="text-sm text-slate-600 mt-1">${item.promise}</p>
             </div>
-            ${index < appData.funnel.length - 1 ? '<div class="text-center text-slate-400 font-bold text-2xl my-1">↓</div>' : ''}
-        `).join('');
+            <div class="overflow-x-auto">
+                <table class="min-w-full bg-white text-sm">
+                    <thead class="bg-slate-100">
+                        <tr>
+                            <th class="text-left py-2 px-3 uppercase font-semibold text-slate-600">Stage</th>
+                            <th class="text-right py-2 px-3 uppercase font-semibold text-slate-600">Price</th>
+                            <th class="text-right py-2 px-3 uppercase font-semibold text-slate-600">Sales</th>
+                            <th class="text-right py-2 px-3 uppercase font-semibold text-slate-600">Revenue</th>
+                        </tr>
+                    </thead>
+                    <tbody id="revenue-table-body" class="text-slate-700"></tbody>
+                </table>
+            </div>
+        `;
+
+        const inputs = {
+            traffic: document.getElementById('traffic'),
+            fe_cvr: document.getElementById('fe_cvr'),
+            upsell1_cvr: document.getElementById('upsell1_cvr'),
+            accelerator_cvr: document.getElementById('accelerator_cvr')
+        };
+
+        const updateRevenueProjection = () => {
+            const traffic = parseInt(inputs.traffic.value) || 0;
+            const fe_cvr = parseInt(inputs.fe_cvr.value);
+            const upsell1_cvr = parseInt(inputs.upsell1_cvr.value);
+            const accelerator_cvr = parseInt(inputs.accelerator_cvr.value);
+            
+            document.getElementById('fe_cvr_val').textContent = fe_cvr;
+            document.getElementById('upsell1_cvr_val').textContent = upsell1_cvr;
+            document.getElementById('accelerator_cvr_val').textContent = accelerator_cvr;
+
+            const fe_sales = Math.round(traffic * (fe_cvr / 100));
+            const bump1_sales = Math.round(fe_sales * (defaults.bump1_take / 100));
+            const bump2_sales = Math.round(fe_sales * (defaults.bump2_take / 100));
+            const upsell1_sales = Math.round(fe_sales * (upsell1_cvr / 100));
+            const upsell2_sales = Math.round(upsell1_sales * (defaults.upsell2_cvr / 100));
+            const accelerator_sales = Math.round(fe_sales * (accelerator_cvr / 100));
+
+            const fe_rev = fe_sales * prices.fe;
+            const bump1_rev = bump1_sales * prices.bump1;
+            const bump2_rev = bump2_sales * prices.bump2;
+            const upsell1_rev = upsell1_sales * prices.upsell1;
+            const upsell2_rev = upsell2_sales * prices.upsell2;
+            const accelerator_rev = accelerator_sales * prices.accelerator;
+
+            const total_rev = fe_rev + bump1_rev + bump2_rev + upsell1_rev + upsell2_rev + accelerator_rev;
+
+            const formatCurrency = (num) => `$${num.toLocaleString('en-US', {minimumFractionDigits: 0, maximumFractionDigits: 0})}`;
+
+            document.getElementById('revenue-table-body').innerHTML = `
+                <tr class="border-b"><td class="py-2 px-3 font-semibold">Front-End Offer</td><td class="text-right py-2 px-3">${formatCurrency(prices.fe)}</td><td class="text-right py-2 px-3">${fe_sales}</td><td class="text-right py-2 px-3">${formatCurrency(fe_rev)}</td></tr>
+                <tr class="border-b"><td class="py-2 px-3 font-semibold">Order Bump 1</td><td class="text-right py-2 px-3">${formatCurrency(prices.bump1)}</td><td class="text-right py-2 px-3">${bump1_sales}</td><td class="text-right py-2 px-3">${formatCurrency(bump1_rev)}</td></tr>
+                <tr class="border-b"><td class="py-2 px-3 font-semibold">Order Bump 2</td><td class="text-right py-2 px-3">${formatCurrency(prices.bump2)}</td><td class="text-right py-2 px-3">${bump2_sales}</td><td class="text-right py-2 px-3">${formatCurrency(bump2_rev)}</td></tr>
+                <tr class="border-b"><td class="py-2 px-3 font-semibold">Upsell 1</td><td class="text-right py-2 px-3">${formatCurrency(prices.upsell1)}</td><td class="text-right py-2 px-3">${upsell1_sales}</td><td class="text-right py-2 px-3">${formatCurrency(upsell1_rev)}</td></tr>
+                <tr class="border-b"><td class="py-2 px-3 font-semibold">Upsell 2</td><td class="text-right py-2 px-3">${formatCurrency(prices.upsell2)}</td><td class="text-right py-2 px-3">${upsell2_sales}</td><td class="text-right py-2 px-3">${formatCurrency(upsell2_rev)}</td></tr>
+                <tr class="border-b bg-blue-50"><td class="py-2 px-3 font-bold text-blue-800">Accelerator Program</td><td class="text-right py-2 px-3 font-bold text-blue-800">${formatCurrency(prices.accelerator)}</td><td class="text-right py-2 px-3 font-bold text-blue-800">${accelerator_sales}</td><td class="text-right py-2 px-3 font-bold text-blue-800">${formatCurrency(accelerator_rev)}</td></tr>
+                <tr class="bg-slate-200"><td class="py-3 px-3 font-bold text-lg" colspan="3">Total Projected Revenue</td><td class="text-right py-3 px-3 font-bold text-lg">${formatCurrency(total_rev)}</td></tr>
+            `;
+        };
+        
+        Object.values(inputs).forEach(input => {
+            input.addEventListener('input', updateRevenueProjection);
+        });
+
+        updateRevenueProjection();
     }
+
+
 
     function renderContentPillars() {
         const container = document.getElementById('content-pillars-container');
@@ -301,13 +430,75 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    function renderCapitalFunnel() {
+        const container = document.getElementById('capital-funnel-container');
+        container.innerHTML = `
+            <div class="space-y-4">
+                ${appData.capitalFunnel.map((item, index) => `
+                    <div class="funnel-stage p-4 rounded-lg bg-slate-50 border border-slate-200">
+                        <div class="flex justify-between items-start mb-3">
+                            <div class="flex-1">
+                                <h4 class="font-bold text-blue-900 text-lg">${item.stage}: ${item.name}</h4>
+                                <p class="text-slate-600 text-sm mt-1">${item.description}</p>
+                            </div>
+                            <span class="text-2xl font-extrabold text-blue-800 ml-4">${item.price}</span>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-3">
+                            <div>
+                                <h5 class="font-semibold text-slate-700 mb-2">Includes:</h5>
+                                <ul class="text-sm text-slate-600 space-y-1">
+                                    ${item.includes.map(inc => `<li class="flex items-start"><span class="text-green-600 mr-2">✓</span>${inc}</li>`).join('')}
+                                </ul>
+                            </div>
+                            <div>
+                                <h5 class="font-semibold text-slate-700 mb-2">Strategic Justification:</h5>
+                                <p class="text-sm text-slate-600 italic">${item.justification}</p>
+                            </div>
+                        </div>
+                        ${index < appData.capitalFunnel.length - 1 ? '<div class="text-center mt-4"><span class="text-blue-600 text-2xl">↓</span></div>' : ''}
+                    </div>
+                `).join('')}
+            </div>
+        `;
+    }
+
+    function initializeFunnelTabs() {
+        const calcTab = document.getElementById('calc-tab');
+        const funnelTab = document.getElementById('funnel-tab');
+        const calcContent = document.getElementById('calculator-content');
+        const funnelContent = document.getElementById('funnel-content');
+
+        function switchTab(activeTab, activeContent, inactiveTab, inactiveContent) {
+            activeTab.classList.add('active');
+            activeTab.classList.remove('bg-slate-200', 'text-slate-600');
+            activeTab.classList.add('bg-blue-800', 'text-white');
+            
+            inactiveTab.classList.remove('active');
+            inactiveTab.classList.remove('bg-blue-800', 'text-white');
+            inactiveTab.classList.add('bg-slate-200', 'text-slate-600');
+            
+            activeContent.classList.remove('hidden');
+            inactiveContent.classList.add('hidden');
+        }
+
+        calcTab.addEventListener('click', () => {
+            switchTab(calcTab, calcContent, funnelTab, funnelContent);
+        });
+
+        funnelTab.addEventListener('click', () => {
+            switchTab(funnelTab, funnelContent, calcTab, calcContent);
+        });
+    }
+
     renderPainPointChart();
     renderCompetitorAnalysis();
     renderBeliefLadder();
     renderDealOS();
     renderGuaranteeExamples();
-    renderFunnel();
+    renderRevenueCalculator();
+    renderCapitalFunnel();
     renderContentPillars();
+    initializeFunnelTabs();
     
     const initialHash = window.location.hash || '#dashboard';
     navigate(initialHash);

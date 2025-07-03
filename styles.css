@@ -17,3 +17,46 @@ body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
 .score-5 { color: #16a34a; } .score-4 { color: #4ade80; } .score-3 { color: #facc15; } .score-2 { color: #fb923c; } .score-1 { color: #ef4444; }
 .comp-btn { transition: all 0.2s; }
 .comp-btn.active { background-color: #1e3a8a; color: white; border-color: #1e3a8a; }
+input[type=range]::-webkit-slider-thumb { 
+    -webkit-appearance: none; 
+    appearance: none; 
+    width: 20px; 
+    height: 20px; 
+    background: #1e3a8a; 
+    cursor: pointer; 
+    border-radius: 50%; 
+}
+input[type=range]::-moz-range-thumb { 
+    width: 20px; 
+    height: 20px; 
+    background: #1e3a8a; 
+    cursor: pointer; 
+    border-radius: 50%; 
+}
+
+.funnel-tab { 
+    transition: all 0.2s ease-in-out; 
+}
+
+.funnel-tab.active { 
+    background-color: #1e3a8a; 
+    color: white; 
+}
+
+.funnel-content { 
+    display: block; 
+}
+
+.funnel-content.hidden { 
+    display: none; 
+}
+
+.funnel-stage { 
+    transition: all 0.3s ease-in-out; 
+    border-left: 4px solid #e2e8f0; 
+}
+
+.funnel-stage:hover { 
+    border-left-color: #1e3a8a; 
+    background-color: #f8fafc; 
+}

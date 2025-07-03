@@ -3,6 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Chosen Palette: Warm Neutrals (Slate, Blue Accent) -->
+    <!-- Application Structure Plan: A single-page application with a fixed left-hand navigation sidebar and a main content area. This structure allows users to easily jump between different facets of the strategic report—Dashboard, Market, Customer, Strategy, GTM Plan, and the new Strategic Playbook—without losing context. It's a modern, intuitive approach for exploring a dense, multi-part document, prioritizing user flow over a rigid, linear chapter structure. -->
+    <!-- Visualization & Content Choices: The application uses a variety of interactive elements. A Chart.js donut chart visualizes customer pain points. An interactive HTML component details competitor analysis. The Belief Ladder, Deal OS, and Guarantee examples are clickable diagrams. The new interactive Revenue Calculator in the Playbook section allows for dynamic modeling of the sales funnel, replacing the static list. This selection avoids static text, transforming the report into an engaging tool for understanding and decision-making. -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
     <title>Interactive Strategic Blueprint for CRE</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -14,6 +18,7 @@
 <body class="bg-slate-50 text-slate-800">
 
     <div class="flex min-h-screen">
+        <!-- Sidebar Navigation -->
         <aside class="w-64 bg-slate-900 text-slate-200 p-6 fixed h-full shadow-2xl">
             <h1 class="text-2xl font-bold text-white mb-2">First-Deal</h1>
             <h2 class="text-sm font-light text-slate-400 mb-8">Strategic Blueprint</h2>
@@ -45,6 +50,7 @@
             </div>
         </aside>
 
+        <!-- Main Content -->
         <main class="ml-64 p-6 sm:p-8 md:p-12 w-full">
             
             <section id="dashboard" class="content-section active">
@@ -91,10 +97,10 @@
                              <h2 class="text-2xl font-bold mb-4">The 8 Rings of Customer Pain</h2>
                              <p class="text-slate-600 mb-4">Analysis of 820+ user quotes reveals that capital barriers are the most acute pain point, creating the primary strategic opening.</p>
                              <div class="chart-container">
-                                 <canvas id="painPointChart"></canvas>
+                                <canvas id="painPointChart"></canvas>
                              </div>
                              <div id="painPointDetail" class="mt-4 p-4 bg-slate-100 rounded-lg text-center h-24 flex items-center justify-center">
-                                 <p class="text-slate-600 italic">Click a segment to see the deeper pain.</p>
+                                <p class="text-slate-600 italic">Click a segment to see the deeper pain.</p>
                              </div>
                         </div>
                         <div class="bg-white p-8 rounded-xl shadow-lg border border-slate-200">
@@ -103,7 +109,7 @@
                             <div id="competitor-buttons" class="flex flex-wrap gap-2 mb-4">
                                 </div>
                             <div id="competitor-detail-card" class="p-4 bg-slate-100 rounded-lg min-h-[200px]">
-                                 <p class="text-slate-600 italic">Select a feature above to analyze the opportunity.</p>
+                                <p class="text-slate-600 italic">Select a feature above to analyze the opportunity.</p>
                             </div>
                         </div>
                     </div>
@@ -119,15 +125,15 @@
                         <div class="lg:col-span-2 bg-white p-8 rounded-xl shadow-lg border border-slate-200">
                              <h2 class="text-2xl font-bold mb-4">Avatar: "Michael Chen"</h2>
                              <div class="space-y-4 text-slate-700">
-                                 <p><strong>Age:</strong> 38</p>
-                                 <p><strong>Profession:</strong> Senior Software Engineer</p>
-                                 <p><strong>Income:</strong> ~$225k Household</p>
-                                 <p><strong>Capital:</strong> $150k Liquid</p>
-                                 <p><strong>Psychology:</strong> Data-driven, ambitious, but risk-averse and paralyzed by a fear of making a catastrophic mistake.</p>
-                                 <div class="p-4 bg-amber-50 border-l-4 border-amber-400 rounded-r-lg">
-                                     <p class="font-semibold text-amber-800">Core Internal Conflict:</p>
-                                     <p class="text-sm italic text-amber-700">"I've been working on this for quite a while now so I know the ins and outs, but I'm yet to close on anything for a lack of funding."</p>
-                                 </div>
+                                <p><strong>Age:</strong> 38</p>
+                                <p><strong>Profession:</strong> Senior Software Engineer</p>
+                                <p><strong>Income:</strong> ~$225k Household</p>
+                                <p><strong>Capital:</strong> $150k Liquid</p>
+                                <p><strong>Psychology:</strong> Data-driven, ambitious, but risk-averse and paralyzed by a fear of making a catastrophic mistake.</p>
+                                <div class="p-4 bg-amber-50 border-l-4 border-amber-400 rounded-r-lg">
+                                    <p class="font-semibold text-amber-800">Core Internal Conflict:</p>
+                                    <p class="text-sm italic text-amber-700">"I've been working on this for quite a while now so I know the ins and outs, but I'm yet to close on anything for a lack of funding."</p>
+                                </div>
                             </div>
                         </div>
 
@@ -135,7 +141,7 @@
                              <h2 class="text-2xl font-bold mb-4">The Belief Transformation Ladder</h2>
                              <p class="text-slate-600 mb-6">Our marketing must systematically dismantle these limiting beliefs and install new, empowering ones. Click each rung to see the transformation.</p>
                              <div class="space-y-3" id="belief-ladder">
-                                 </div>
+                                </div>
                         </div>
                     </div>
                  </div>
@@ -153,17 +159,17 @@
                          </div>
 
                          <div class="bg-white p-8 rounded-xl shadow-lg border border-slate-200">
-                              <h2 class="text-3xl font-bold mb-4">Unique Mechanism: The "Deal Operating System" (Deal OS)</h2>
-                              <p class="text-slate-600 mb-6">The Deal OS is our proprietary, step-by-step system that turns ambitious beginners into confident, fundable deal-makers. Click each module to learn more.</p>
-                              <div class="grid grid-cols-1 md:grid-cols-3 gap-6" id="deal-os">
-                                 </div>
+                             <h2 class="text-3xl font-bold mb-4">Unique Mechanism: The "Deal Operating System" (Deal OS)</h2>
+                             <p class="text-slate-600 mb-6">The Deal OS is our proprietary, step-by-step system that turns ambitious beginners into confident, fundable deal-makers. Click each module to learn more.</p>
+                             <div class="grid grid-cols-1 md:grid-cols-3 gap-6" id="deal-os">
+                                </div>
                          </div>
                          
                          <div class="bg-blue-800 text-white p-8 rounded-xl shadow-lg">
                             <h2 class="text-3xl font-bold mb-3">The New Guarantee: The Confidence & Credibility Protocol</h2>
                             <p class="opacity-90 mb-6">This revised guarantee is more sustainable and directly targets the avatar's core fear: lack of confidence. It guarantees their competence, which is the true value they seek.</p>
                             <div id="guarantee-examples" class="space-y-4">
-                                 </div>
+                                </div>
                          </div>
                     </div>
                 </div>
@@ -178,24 +184,24 @@
                          <h2 class="text-3xl font-bold mb-4">The Flagship Offer</h2>
                          <div class="grid grid-cols-1 md:grid-cols-5 gap-8 items-center">
                             <div class="md:col-span-3 prose max-w-none text-slate-700">
-                                 <p>Our flagship offer is a single, comprehensive program designed to deliver one outcome: <strong>the competence and confidence to close your first commercial real estate deal.</strong></p>
-                                 <p>This isn't a passive course; it's an active, hands-on accelerator that combines systematic education with real-world implementation and support.</p>
-                                 <ul>
-                                     <li>Complete access to the Deal OS.</li>
-                                     <li>Weekly group coaching & deal analysis calls.</li>
-                                     <li>A private community of professional peers.</li>
-                                     <li>The full Confidence & Credibility Guarantee.</li>
-                                 </ul>
-                                 <p class="mt-4">A future **Capital Partner** program will be available to graduates, offering them the opportunity to invest in exclusive, crowdfunded deals sourced by Curtis Evans.</p>
+                                <p>Our flagship offer is a single, comprehensive program designed to deliver one outcome: <strong>the competence and confidence to close your first commercial real estate deal.</strong></p>
+                                <p>This isn't a passive course; it's an active, hands-on accelerator that combines systematic education with real-world implementation and support.</p>
+                                <ul>
+                                    <li>Complete access to the Deal OS.</li>
+                                    <li>Weekly group coaching & deal analysis calls.</li>
+                                    <li>A private community of professional peers.</li>
+                                    <li>The full Confidence & Credibility Guarantee.</li>
+                                </ul>
+                                <p class="mt-4">A future <strong>Capital Partner</strong> program will be available to graduates, offering them the opportunity to invest in exclusive, crowdfunded deals sourced by Curtis Evans.</p>
                             </div>
                             <div class="md:col-span-2 border-2 border-blue-800 p-6 rounded-lg bg-white shadow-2xl flex flex-col justify-center text-center">
-                                 <h3 class="text-xl font-bold text-blue-900">First-Deal Accelerator</h3>
-                                 <p class="text-5xl font-extrabold my-4 text-blue-800">$6,125</p>
-                                 <p class="text-slate-600 text-sm">A complete, outcome-focused investment to build the competence and confidence for your first deal, guaranteed.</p>
+                                <h3 class="text-xl font-bold text-blue-900">First-Deal Accelerator</h3>
+                                <p class="text-5xl font-extrabold my-4 text-blue-800">$4,995<span class="text-2xl">+</span></p>
+                                <p class="text-slate-600 text-sm">A complete, outcome-focused investment to build the competence and confidence for your first deal, guaranteed.</p>
                             </div>
                          </div>
                     </div>
-                 </div>
+                </div>
             </section>
             
             <section id="playbook" class="content-section">
@@ -205,10 +211,32 @@
                     
                     <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
                         <div class="bg-white p-8 rounded-xl shadow-lg border border-slate-200">
-                            <h2 class="text-2xl font-bold text-slate-900 mb-4">Playbook 1: The "Deal Ready" Low-Ticket Funnel</h2>
-                            <p class="text-slate-600 mb-6">This ascension model acquires customers profitably and qualifies them for the Accelerator. It solves micro-problems at each step to build trust and commitment.</p>
-                            <div id="funnel-stages" class="space-y-2">
-                                 </div>
+                            <h2 class="text-2xl font-bold text-slate-900 mb-4">Playbook 1: Low-Ticket Funnel Examples</h2>
+                            <p class="text-slate-600 mb-6">Two strategic approaches to building a profitable low-ticket funnel that qualifies serious buyers for the main Accelerator program.</p>
+                            
+                            <!-- Toggle Buttons -->
+                            <div class="flex gap-2 mb-6">
+                                <button id="calc-tab" class="funnel-tab bg-blue-800 text-white px-4 py-2 rounded-lg font-semibold text-sm">Revenue Calculator</button>
+                                <button id="funnel-tab" class="funnel-tab bg-slate-200 text-slate-600 px-4 py-2 rounded-lg font-semibold text-sm">Capital-First Funnel</button>
+                            </div>
+
+                            <!-- Calculator Content -->
+                            <div id="calculator-content" class="funnel-content">
+                                <h3 class="text-lg font-bold text-slate-800 mb-3">Interactive Revenue Modeling</h3>
+                                <p class="text-slate-600 mb-4">Model the potential of the low-ticket funnel. Adjust the sliders to see how small changes in conversion rates can impact overall revenue.</p>
+                                <div id="revenue-calculator-container">
+                                    <!-- Calculator injected by JS -->
+                                </div>
+                            </div>
+
+                            <!-- Funnel Content -->
+                            <div id="funnel-content" class="funnel-content hidden">
+                                <h3 class="text-lg font-bold text-slate-800 mb-3">The Capital-First Low-Ticket Funnel</h3>
+                                <p class="text-slate-600 mb-4">A strategic funnel engineered to tackle the #1 pain point—Capital & Funding Barriers (22% of all complaints)—head-on.</p>
+                                <div id="capital-funnel-container">
+                                    <!-- Funnel details injected by JS -->
+                                </div>
+                            </div>
                         </div>
 
                         <div class="bg-white p-8 rounded-xl shadow-lg border border-slate-200">
