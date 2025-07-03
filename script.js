@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
         stats: {
             tam: 799.6,
             segment: 50000,
-            revenue: 6
+            aov: 145
         },
         painPoints: [
             { label: 'Capital & Funding', value: 22, detail: "'I feel un-investable. I don\\'t know how to become someone people trust with money.'" },
@@ -37,10 +37,6 @@ document.addEventListener('DOMContentLoaded', () => {
             { title: "Part 1: The 1-on-1 Deal Review", scenario: "You complete the Accelerator but still feel hesitant about your first offer. You're worried you've missed something in your analysis.", solution: "You invoke the guarantee. You schedule a private 1-on-1 session with Curtis to review your deal. He'll go through your underwriting line-by-line, pressure-test your assumptions, and give you the clear 'go' or 'no-go' decision with his expert reasoning. You leave with absolute clarity and confidence." },
             { title: "Part 2: The 'Blueprint-Backed' Credibility Seal", scenario: "You're ready to make an offer, but you're concerned brokers won't take you seriously as a new investor.", solution: "Because your offer was built using the Deal OS and reviewed by Curtis, you can submit it with the 'Blueprint-Backed' seal. This tells brokers and sellers that your offer has been vetted by an experienced professional, giving you instant credibility and a higher likelihood of being accepted." }
         ],
-        funnel: {
-            prices: { fe: 37, bump1: 17, bump2: 10, upsell1: 197, upsell2: 997, accelerator: 4995 },
-            defaults: { traffic: 1000, fe_cvr: 4, bump1_take: 30, bump2_take: 25, upsell1_cvr: 10, upsell2_cvr: 15, accelerator_cvr: 5 }
-        },
         contentPillars: [
             { title: 'First-Deal Frameworks (40%)', purpose: 'Builds authority by teaching core, step-by-step processes. Directly addresses the "Knowledge Gap" pain point.', examples: ['5 Steps to Buying Your First Commercial Property (Beginner\'s Guide)', 'How to Analyze a Commercial Deal in Under 30 Minutes', 'The Ultimate Due Diligence Checklist for Your First Property'] },
             { title: 'Real Deal Reveals (25%)', purpose: 'Builds trust through radical transparency. Showcasing actual deals (wins and losses) proves you are a practitioner, not a performer.', examples: ['How I Made $120K on One Vacancy: A Complete Deal Breakdown', 'My $50,000 Mistake: The Worst Deal I Ever Did & The Lesson It Taught Me', 'From Start to Finish: The True Story of My First 12-Unit Building'] },
@@ -48,56 +44,25 @@ document.addEventListener('DOMContentLoaded', () => {
             { title: 'Market Hot-Takes & Myth Busting (10%)', purpose: 'Drives engagement and shareability by providing timely, opinionated commentary that counters common (and often wrong) advice.', examples: ['Why the "CRE Crash" is a Lie (And Where the Real Opportunity Is)', 'The Cap Rate Myth That Costs Beginners Millions', 'Yes, Rates are 7%. Here\'s How to Cash Flow Anyway.'] },
             { title: 'Lifestyle & Mindset (10%)', purpose: 'Humanizes the brand and makes you relatable. This content addresses the "Personal Stress" pain point.', examples: ['How I Manage a $50M Portfolio in 5 Hours a Week', 'The Mindset Shift from W-2 Employee to Real Estate Investor', 'From Analysis Paralysis to Your First Offer: A Mental Framework'] }
         ],
-        capitalFunnel: [
-            { 
-                stage: 'Front-End Product', 
-                name: 'The 7-Day Funding Credibility Kit', 
-                price: '$27',
-                description: 'A micro-transformation product designed to solve the immediate problem of not being taken seriously by lenders or partners.',
-                includes: ['The "Pro-Level" One-Page Deal Summary template', 'The "Experience Translator" Script for W-2 professionals', 'Top 5 Lender Questions Cheat Sheet'],
-                justification: 'Directly attacks the belief "You won\'t get funding without experience" and creates immediate credibility.'
+        newFunnel: {
+            prices: { 
+                fe: 37, 
+                bump1: 17, 
+                bump2: 22, 
+                upsell1: 97, 
+                upsell2: 197, 
+                accelerator: 4995 
             },
-            {
-                stage: 'Order Bump 1',
-                name: 'The Private Lender Rolodex & CRM',
-                price: '+$27',
-                description: 'Instantly solves the "who do I talk to?" problem created by the FE offer.',
-                includes: ['Categorized list of alternative funding sources', 'Pre-built Trello/Notion CRM template for tracking conversations'],
-                justification: 'Speed-based upsell that saves weeks of research and makes the FE product immediately actionable.'
-            },
-            {
-                stage: 'Order Bump 2',
-                name: 'The Funding Objection Shield',
-                price: '+$17',
-                description: 'Word-for-word scripts for handling the most common funding objections in high-interest-rate markets.',
-                includes: ['Scripts for "Rates are too high" objections', 'Responses to market uncertainty concerns', 'First-time investor credibility boosters'],
-                justification: 'Makes the avatar better than other beginners by handling objections confidently.'
-            },
-            {
-                stage: 'Upsell 1',
-                name: 'The 7% Rate Deal-Finding System',
-                price: '$97',
-                description: 'Comprehensive system for finding and analyzing profitable deals in today\'s high-rate market.',
-                includes: ['Cash-Flow-in-Any-Market Underwriting Model', 'Finding Motivated Sellers strategies', '3 Creative Financing Structures'],
-                justification: 'Essential next step - funding credibility is useless without viable deals that stand up to scrutiny.'
-            },
-            {
-                stage: 'Upsell 2',
-                name: 'The Automated Deal-Flow Toolkit',
-                price: '$67',
-                description: 'Done-for-you templates and strategies for consistent deal pipeline without manual work.',
-                includes: ['Broker Whisperer Email Pack', 'Off-Market Machine setup guide', 'Advanced Deal-Tracking Dashboard'],
-                justification: 'Offers a different way through automation and systems, appealing to data-driven professionals.'
-            },
-            {
-                stage: 'High-Ticket VSL',
-                name: 'First-Deal Accelerator Application',
-                price: '$4,995+',
-                description: 'Implementation partnership with 6-month deal guarantee and co-investment options.',
-                includes: ['Expert partnership through every step', 'Access to funding network', 'Risk-sharing co-investment', '6-month guaranteed timeline'],
-                justification: 'Bridges the execution gap - transforms knowledge into real-world results with expert guidance.'
+            defaults: { 
+                traffic: 1000, 
+                fe_cvr: 4, 
+                bump1_take: 30, 
+                bump2_take: 25, 
+                upsell1_cvr: 10, 
+                upsell2_cvr: 15, 
+                accelerator_cvr: 5 
             }
-        ]
+        }
     };
 
     const navLinks = document.querySelectorAll('#main-nav a');
@@ -146,15 +111,30 @@ document.addEventListener('DOMContentLoaded', () => {
         };
         window.requestAnimationFrame(step);
     }
+
+    function animateValueAOV(obj, start, end, duration) {
+        let startTimestamp = null;
+        const step = (timestamp) => {
+            if (!startTimestamp) startTimestamp = timestamp;
+            const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+            let value = progress * (end - start) + start;
+            obj.innerHTML = `$${Math.floor(value)}`;
+
+            if (progress < 1) {
+                window.requestAnimationFrame(step);
+            }
+        };
+        window.requestAnimationFrame(step);
+    }
     
     function animateStats(){
         const tam = document.getElementById('stat-tam');
         const segment = document.getElementById('stat-segment');
-        const revenue = document.getElementById('stat-revenue');
+        const aov = document.getElementById('stat-aov');
         
         animateValue(tam, 0, appData.stats.tam, 1500, true);
         animateValue(segment, 0, appData.stats.segment, 1500);
-        animateValue(revenue, 0, appData.stats.revenue, 1500);
+        animateValueAOV(aov, 0, appData.stats.aov, 1500);
     }
 
     function renderPainPointChart() {
@@ -253,27 +233,25 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function renderBeliefLadder() {
-        const container = document.getElementById('belief-ladder');
-        container.innerHTML = appData.beliefLadder.map(item => `
-            <div class="belief-rung bg-slate-50 border border-slate-200 p-4 rounded-lg hover:shadow-md hover:border-blue-300">
-                <div class="flex justify-between items-center">
-                    <h3 class="font-bold text-lg text-blue-900">${item.rung}. ${item.title}</h3>
-                    <span class="text-blue-700 transform transition-transform duration-300">▼</span>
+        const ladderContainer = document.getElementById('belief-ladder');
+        ladderContainer.innerHTML = appData.beliefLadder.map((item, index) => `
+            <div class="belief-rung p-4 border border-slate-200 rounded-lg cursor-pointer hover:bg-slate-50 hover:border-blue-500" data-index="${index}">
+                <div class="flex items-center justify-between">
+                    <h4 class="font-bold text-slate-800">${item.rung}. ${item.title}</h4>
+                    <svg class="w-5 h-5 text-slate-400 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                 </div>
-                <div class="details mt-4 pt-4 border-t border-slate-200">
-                    <p class="mb-2 text-red-600"><strong class="text-slate-700">Limiting Belief:</strong> <span class="italic">${item.oldBelief}</span></p>
-                    <p class="text-green-600"><strong class="text-slate-700">Empowering Belief:</strong> <strong class="font-semibold">${item.newBelief}</strong></p>
+                <div class="belief-detail hidden mt-3 pt-3 border-t border-slate-200">
+                    <p class="text-sm text-red-600 mb-2"><strong class="font-semibold">Old Belief:</strong> ${item.oldBelief}</p>
+                    <p class="text-sm text-green-600"><strong class="font-semibold">New Belief:</strong> ${item.newBelief}</p>
                 </div>
             </div>
         `).join('');
-        
-        container.addEventListener('click', e => {
+
+        ladderContainer.addEventListener('click', (e) => {
             const rung = e.target.closest('.belief-rung');
             if (rung) {
-                 container.querySelectorAll('.belief-rung').forEach(r => {
-                    if (r !== rung) r.classList.remove('open');
-                });
-                rung.classList.toggle('open');
+                rung.querySelector('.belief-detail').classList.toggle('hidden');
+                rung.querySelector('svg').classList.toggle('rotate-180');
             }
         });
     }
@@ -281,37 +259,57 @@ document.addEventListener('DOMContentLoaded', () => {
     function renderDealOS() {
         const container = document.getElementById('deal-os');
         container.innerHTML = appData.dealOS.map(item => `
-            <div class="os-module bg-slate-50 border border-slate-200 p-6 rounded-lg hover:shadow-lg hover:border-blue-400">
-                <h3 class="font-extrabold text-xl text-blue-900 mb-3">${item.title}</h3>
-                <p class="text-slate-600 mb-4">${item.goal}</p>
-                 <div class="details mt-4 pt-4 border-t border-slate-200">
-                    <p class="text-sm text-slate-700">${item.process}</p>
-                </div>
-            </div>
-        `).join('');
-        
-        container.addEventListener('click', e => {
-            const module = e.target.closest('.os-module');
-            if (module) {
-                module.classList.toggle('open');
-            }
-        });
-    }
-
-    function renderGuaranteeExamples() {
-        const container = document.getElementById('guarantee-examples');
-        container.innerHTML = appData.guaranteeExamples.map(item => `
-            <div class="bg-blue-700/50 p-4 rounded-lg">
-                <h4 class="font-bold text-lg">${item.title}</h4>
-                <p class="text-sm opacity-80 mt-1"><strong>Scenario:</strong> ${item.scenario}</p>
-                <p class="text-sm opacity-80 mt-2"><strong>Solution:</strong> ${item.solution}</p>
+            <div class="os-module p-6 bg-slate-50 rounded-lg border border-slate-200">
+                <h3 class="font-bold text-lg text-blue-800 mb-2">${item.title}</h3>
+                <p class="font-semibold text-slate-600 text-sm mb-2">${item.goal}</p>
+                <p class="text-slate-500 text-sm">${item.process}</p>
             </div>
         `).join('');
     }
     
+    function renderGuaranteeExamples() {
+        const container = document.getElementById('guarantee-examples');
+        container.innerHTML = appData.guaranteeExamples.map(item => `
+             <div class="guarantee-example bg-blue-700 p-4 rounded-lg">
+                <h4 class="font-bold text-lg mb-2">${item.title}</h4>
+                <p class="text-sm opacity-80 mb-2"><strong>Scenario:</strong> ${item.scenario}</p>
+                <p class="text-sm bg-blue-900 p-3 rounded-md"><strong>Solution:</strong> ${item.solution}</p>
+            </div>
+        `).join('');
+    }
+
+    function renderContentPillars() {
+        const container = document.getElementById('content-pillars-container');
+        container.innerHTML = appData.contentPillars.map(pillar => `
+            <div class="pillar-item p-4 border border-slate-200 rounded-lg cursor-pointer hover:bg-slate-50 hover:border-blue-500">
+                <div class="flex justify-between items-center">
+                    <h4 class="font-bold text-slate-800">${pillar.title}</h4>
+                    <svg class="w-5 h-5 text-slate-400 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </div>
+                <div class="pillar-detail hidden mt-3 pt-3 border-t border-slate-200 space-y-3">
+                    <p class="text-sm text-slate-600"><strong class="font-semibold">Purpose:</strong> ${pillar.purpose}</p>
+                    <div>
+                        <p class="text-sm font-semibold text-slate-600 mb-1">Example Titles:</p>
+                        <ul class="list-disc list-inside text-sm text-slate-500 space-y-1">
+                            ${pillar.examples.map(ex => `<li>${ex}</li>`).join('')}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        `).join('');
+
+        container.addEventListener('click', (e) => {
+            const item = e.target.closest('.pillar-item');
+            if (item) {
+                item.querySelector('.pillar-detail').classList.toggle('hidden');
+                item.querySelector('svg').classList.toggle('rotate-180');
+            }
+        });
+    }
+
     function renderRevenueCalculator() {
         const container = document.getElementById('revenue-calculator-container');
-        const { prices, defaults } = appData.funnel;
+        const { prices, defaults } = appData.newFunnel;
 
         container.innerHTML = `
             <div class="space-y-4 mb-6">
@@ -403,104 +401,49 @@ document.addEventListener('DOMContentLoaded', () => {
         updateRevenueProjection();
     }
 
-
-
-    function renderContentPillars() {
-        const container = document.getElementById('content-pillars-container');
-        container.innerHTML = appData.contentPillars.map(pillar => `
-            <div class="content-pillar bg-slate-50 border border-slate-200 p-4 rounded-lg hover:shadow-md hover:border-blue-300">
-                <div class="flex justify-between items-center">
-                    <h3 class="font-bold text-lg text-blue-900">${pillar.title}</h3>
-                    <span class="text-blue-700 transform transition-transform duration-300">▼</span>
-                </div>
-                <div class="details mt-4 pt-4 border-t border-slate-200 prose prose-sm max-w-none">
-                    <p><strong>Purpose:</strong> ${pillar.purpose}</p>
-                    <p><strong>Example Launch Titles:</strong></p>
-                    <ul>
-                        ${pillar.examples.map(ex => `<li>${ex}</li>`).join('')}
-                    </ul>
-                </div>
-            </div>
-        `).join('');
-        container.addEventListener('click', e => {
-            const pillar = e.target.closest('.content-pillar');
-            if (pillar) {
-                pillar.classList.toggle('open');
-            }
-        });
-    }
-
-    function renderCapitalFunnel() {
-        const container = document.getElementById('capital-funnel-container');
-        container.innerHTML = `
-            <div class="space-y-4">
-                ${appData.capitalFunnel.map((item, index) => `
-                    <div class="funnel-stage p-4 rounded-lg bg-slate-50 border border-slate-200">
-                        <div class="flex justify-between items-start mb-3">
-                            <div class="flex-1">
-                                <h4 class="font-bold text-blue-900 text-lg">${item.stage}: ${item.name}</h4>
-                                <p class="text-slate-600 text-sm mt-1">${item.description}</p>
-                            </div>
-                            <span class="text-2xl font-extrabold text-blue-800 ml-4">${item.price}</span>
-                        </div>
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-3">
-                            <div>
-                                <h5 class="font-semibold text-slate-700 mb-2">Includes:</h5>
-                                <ul class="text-sm text-slate-600 space-y-1">
-                                    ${item.includes.map(inc => `<li class="flex items-start"><span class="text-green-600 mr-2">✓</span>${inc}</li>`).join('')}
-                                </ul>
-                            </div>
-                            <div>
-                                <h5 class="font-semibold text-slate-700 mb-2">Strategic Justification:</h5>
-                                <p class="text-sm text-slate-600 italic">${item.justification}</p>
-                            </div>
-                        </div>
-                        ${index < appData.capitalFunnel.length - 1 ? '<div class="text-center mt-4"><span class="text-blue-600 text-2xl">↓</span></div>' : ''}
-                    </div>
-                `).join('')}
-            </div>
-        `;
-    }
-
     function initializeFunnelTabs() {
-        const calcTab = document.getElementById('calc-tab');
-        const funnelTab = document.getElementById('funnel-tab');
-        const calcContent = document.getElementById('calculator-content');
-        const funnelContent = document.getElementById('funnel-content');
+        const overviewTab = document.getElementById('funnel-overview-tab');
+        const calcTab = document.getElementById('revenue-calc-tab');
+        const overviewContent = document.getElementById('funnel-overview-content');
+        const calcContent = document.getElementById('revenue-calc-content');
 
         function switchTab(activeTab, activeContent, inactiveTab, inactiveContent) {
-            activeTab.classList.add('active');
-            activeTab.classList.remove('bg-slate-200', 'text-slate-600');
-            activeTab.classList.add('bg-blue-800', 'text-white');
+            // Update active tab styling
+            activeTab.classList.add('bg-blue-600', 'text-white', 'shadow-lg');
+            activeTab.classList.remove('bg-white', 'text-slate-700', 'border-slate-200', 'hover:border-blue-300', 'hover:text-blue-700');
             
-            inactiveTab.classList.remove('active');
-            inactiveTab.classList.remove('bg-blue-800', 'text-white');
-            inactiveTab.classList.add('bg-slate-200', 'text-slate-600');
+            // Update inactive tab styling  
+            inactiveTab.classList.remove('bg-blue-600', 'text-white', 'shadow-lg');
+            inactiveTab.classList.add('bg-white', 'text-slate-700', 'border-slate-200', 'hover:border-blue-300', 'hover:text-blue-700');
             
+            // Show/hide content
             activeContent.classList.remove('hidden');
             inactiveContent.classList.add('hidden');
         }
 
-        calcTab.addEventListener('click', () => {
-            switchTab(calcTab, calcContent, funnelTab, funnelContent);
+        overviewTab.addEventListener('click', () => {
+            switchTab(overviewTab, overviewContent, calcTab, calcContent);
         });
 
-        funnelTab.addEventListener('click', () => {
-            switchTab(funnelTab, funnelContent, calcTab, calcContent);
+        calcTab.addEventListener('click', () => {
+            switchTab(calcTab, calcContent, overviewTab, overviewContent);
+            // Render calculator when tab is clicked to ensure it's ready
+            if (!document.getElementById('traffic')) {
+                renderRevenueCalculator();
+            }
         });
     }
 
+    // --- Initial Renders ---
     renderPainPointChart();
     renderCompetitorAnalysis();
     renderBeliefLadder();
     renderDealOS();
     renderGuaranteeExamples();
-    renderRevenueCalculator();
-    renderCapitalFunnel();
     renderContentPillars();
     initializeFunnelTabs();
-    
-    const initialHash = window.location.hash || '#dashboard';
-    navigate(initialHash);
+
+    // Initial navigation
+    navigate(window.location.hash);
 
 });
