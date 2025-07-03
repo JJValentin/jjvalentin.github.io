@@ -1,643 +1,315 @@
-// Slide data - Updated to remove Implementation Timeline and have 14 slides total
-const slidesData = {
-  "slides": [
-    {
-      "id": 1,
-      "title": "Strategic Growth Plan: Your Finance Channel",
-      "subtitle": "A Complete Implementation Guide<br>Based on 'The Ultimate Creator & Offer Playbook'",
-      "type": "title"
-    },
-    {
-      "id": 2,
-      "title": "The Three-Phase Strategy",
-      "content": [
-        {
-          "phase": "Phase 1: Market Intelligence Deep Dive",
-          "description": "Understand your audience's psychology and the market landscape"
-        },
-        {
-          "phase": "Phase 2: Build Your Content Engine", 
-          "description": "Create and distribute content to attract, engage, and build trust"
-        },
-        {
-          "phase": "Phase 3: Architect Your Offers",
-          "description": "Develop products and services your audience will want to buy"
-        }
-      ],
-      "type": "phases"
-    },
-    {
-      "id": 3,
-      "title": "Phase 1: Market Intelligence Deep Dive",
-      "content": "Success starts with a profound understanding of who you're talking to and the market you operate in.",
-      "focus_areas": [
-        "Psychological profiling of your ideal follower",
-        "Identifying core challenges and limiting beliefs",
-        "Understanding decision-making patterns",
-        "Analyzing current market conditions"
-      ],
-      "type": "focus_areas"
-    },
-    {
-      "id": 4,
-      "title": "The Psychological Profile of Your Follower",
-      "content": "Your audience is sophisticated, motivated, and skeptical. They are driven by deep-seated motivations and held back by specific fears.",
-      "details": {
-        "motivations": "Core Motivations: A blend of gain and security",
-        "towards": "• Towards: Status, significant financial gain, outperforming the market",
-        "away_from": "• Away From: Loss of wealth, risk, and financial insecurity",
-        "insight": "Actionable Insight: Frame strategies as the smarter, safer way to grow wealth."
-      },
-      "type": "profile"
-    },
-    {
-      "id": 5,
-      "title": "Primary Challenges & Limiting Beliefs",
-      "content": "Your content must proactively dismantle the internal narratives that prevent action.",
-      "challenges": [
-        {
-          "type": "Helplessness (\"I can't do it\"):",
-          "examples": ["\"Commercial real estate is too complex\"", "\"I don't have enough capital or connections\""]
-        },
-        {
-          "type": "Hopelessness (\"It's impossible\"):",
-          "examples": ["\"The market is too competitive\"", "\"It's too late to make real money\""]
-        },
-        {
-          "type": "Worthlessness (\"I'm not smart enough\"):",
-          "examples": ["Feeling unqualified to understand high-level finance"]
-        }
-      ],
-      "type": "challenges"
-    },
-    {
-      "id": 6,
-      "title": "How Your Audience Makes Decisions",
-      "content": "Based on the NHB+ Market Criteria, your audience is likely:",
-      "criteria": [
-        {
-          "type": "Procedural",
-          "description": "They prefer clear, step-by-step instructions and proven frameworks"
-        },
-        {
-          "type": "Externally Referenced", 
-          "description": "They seek expert validation, data, case studies, and testimonials"
-        },
-        {
-          "type": "Thinking/Logical Oriented",
-          "description": "They respond to data, facts, and logical arguments"
-        }
-      ],
-      "type": "decisions"
-    },
-    {
-      "id": 7,
-      "title": "The State of Your Market",
-      "content": "Market Momentum: Expanding",
-      "description": "The demand for financial education is growing due to economic uncertainty and increased interest in alternative investments.",
-      "indicators": [
-        "Rising interest in real estate investing",
-        "Growing distrust of traditional financial advice", 
-        "Increased demand for practical, actionable education"
-      ],
-      "type": "market"
-    },
-    {
-      "id": 8,
-      "title": "Phase 2: The Content Engine Strategy",
-      "content": "Your content must serve a dual purpose:",
-      "purposes": [
-        "1. Attract your ideal follower",
-        "2. Systematically dismantle limiting beliefs that prevent action"
-      ],
-      "strategy": {
-        "name": "Strategy: Strategy-Led Content Engine Model",
-        "points": [
-          "Start with comprehensive, authoritative long-form content",
-          "Break it down into smaller, digestible pieces",
-          "Cater to your audience's procedural and logical orientation"
-        ]
-      },
-      "type": "content_strategy"
-    },
-    {
-      "id": 9,
-      "title": "Core Content Focus: Addressing Limiting Beliefs",
-      "beliefs": [
-        {
-          "belief": "Helplessness (\"I can't do it\"):",
-          "strategy": "Provide simple, actionable steps, tools, and templates",
-          "content": "\"The 7-Step Framework for Vetting a Commercial Property\""
-        },
-        {
-          "belief": "Hopelessness (\"It's impossible\"):",
-          "strategy": "Instill hope with success stories and achievable futures",
-          "content": "\"How a 35-Year-Old Teacher Acquired Their First Rental Property\""
-        },
-        {
-          "belief": "Worthlessness (\"I'm not smart enough\"):",
-          "strategy": "Build confidence with clear data and external validation",
-          "content": "\"You Don't Need a Finance Degree to Understand Cap Rates\""
-        }
-      ],
-      "type": "belief_content"
-    },
-    {
-      "id": 10,
-      "title": "Content Pillars & Format Strategy",
-      "pillars": {
-        "title": "Core Content Pillars:",
-        "items": [
-          "Deal Analysis & Due Diligence Frameworks",
-          "Creative Financing & Capital Stacking",
-          "Risk Mitigation & Asset Protection",
-          "Market Cycles & Trend Analysis"
-        ]
-      },
-      "formats": {
-        "title": "Content Format Strategy:",
-        "long_form": "Long-Form (Weekly): In-depth YouTube videos or detailed newsletters",
-        "short_form": "Short-Form (Daily): Reels, Shorts, and social media posts repurposed from pillar content"
-      },
-      "type": "content_pillars"
-    },
-    {
-      "id": 11,
-      "title": "Phase 3: The Offer Architecture Strategy",
-      "content": "Your offers must be a logical extension of your content, guiding followers from skepticism to conviction.",
-      "approach": {
-        "name": "Approach: The Reductive Method",
-        "steps": [
-          "Envision the ultimate solution",
-          "Break it down into a sequence of ascending offers",
-          "Use the Solution-Problem Model: each solution creates a new, higher-level problem"
-        ]
-      },
-      "result": "This creates a clear customer journey from DIY learner to high-value partner.",
-      "type": "offer_strategy"
-    },
-    {
-      "id": 12,
-      "title": "The Complete Offer Funnel",
-      "offers": [
-        {
-          "name": "Front-End Offer ($47): \"The Deal-Ready Toolkit\"",
-          "problem": "Problem Solved: Initial helplessness and overwhelm",
-          "format": "Format: Digital product with video trainings, checklists, spreadsheet templates"
-        },
-        {
-          "name": "Upsell 1 ($497): \"The Capital Stack Accelerator\"",
-          "problem": "New Problem: \"I found a deal, but how do I fund it?\"",
-          "format": "Format: Done-With-You masterclass on creative financing"
-        },
-        {
-          "name": "Back-End Offer: \"The Investor Syndicate\"",
-          "problem": "New Problem: \"I want to scale faster and access bigger deals\"",
-          "format": "Format: Application-only mastermind or co-investment group"
-        }
-      ],
-      "type": "offer_funnel"
-    },
-    {
-      "id": 13,
-      "title": "Strategic Overlays for Finance Market",
-      "requirements": {
-        "title": "Business Opportunity (BizOp) Requirements:",
-        "items": [
-          "Provide Ethical BizOp: Legitimate, math-backed business models",
-          "Change Success Metrics: Celebrate leading indicators like \"First Deal Analyzed\"",
-          "Use \"Functional Free\" Positioning: Frame value in terms of risk avoidance"
-        ]
-      },
-      "example": "Example: \"This toolkit could save you tens of thousands by helping you spot one bad deal. If it does that just once, it has paid for itself hundreds of times over.\"",
-      "type": "strategic_overlays"
-    },
-    {
-      "id": 14,
-      "title": "Key Success Metrics",
-      "metrics": [
-        {
-          "category": "Leading Indicators:",
-          "items": [
-            "Content engagement rates and follower growth",
-            "Email list growth and open rates",
-            "Social media reach and shares"
-          ]
-        },
-        {
-          "category": "Revenue Indicators:",
-          "items": [
-            "Front-end offer conversion rates",
-            "Customer lifetime value (CLTV)",
-            "Upsell and cross-sell performance"
-          ]
-        },
-        {
-          "category": "Long-term Goals:",
-          "items": [
-            "Build authority in finance/real estate space",
-            "Create predictable revenue streams",
-            "Develop high-value partnerships and opportunities"
-          ]
-        }
-      ],
-      "type": "metrics"
-    }
-  ]
-};
-
-class SlidePresentation {
-  constructor() {
-    this.slides = slidesData.slides;
-    this.currentSlideIndex = 0;
-    this.totalSlides = this.slides.length;
-    
-    this.slideContainer = document.getElementById('slideContainer');
-    this.prevBtn = document.getElementById('prevBtn');
-    this.nextBtn = document.getElementById('nextBtn');
-    this.slideIndicators = document.getElementById('slideIndicators');
-    this.currentSlideEl = document.getElementById('currentSlide');
-    this.totalSlidesEl = document.getElementById('totalSlides');
-    this.progressFill = document.getElementById('progressFill');
-    
-    this.init();
-  }
-  
-  init() {
-    this.renderSlides();
-    this.renderIndicators();
-    this.setupEventListeners();
-    this.updateDisplay();
-    this.updateProgress();
-  }
-  
-  renderSlides() {
-    this.slideContainer.innerHTML = '';
-    
-    this.slides.forEach((slide, index) => {
-      const slideEl = document.createElement('div');
-      slideEl.className = `slide slide--${slide.type === 'title' ? 'title' : 'content'}`;
-      slideEl.setAttribute('data-slide', index);
-      
-      if (index === 0) {
-        slideEl.classList.add('active');
-      }
-      
-      slideEl.innerHTML = this.renderSlideContent(slide);
-      this.slideContainer.appendChild(slideEl);
-    });
-  }
-  
-  renderSlideContent(slide) {
-    switch (slide.type) {
-      case 'title':
-        return `
-          <h1>${slide.title}</h1>
-          <div class="subtitle">${slide.subtitle}</div>
-        `;
-        
-      case 'phases':
-        return `
-          <h2>${slide.title}</h2>
-          <div class="phases-grid">
-            ${slide.content.map(phase => `
-              <div class="phase-card">
-                <h3>${this.escapeHtml(phase.phase)}</h3>
-                <p>${this.escapeHtml(phase.description)}</p>
-              </div>
-            `).join('')}
-          </div>
-        `;
-        
-      case 'focus_areas':
-        return `
-          <h2>${slide.title}</h2>
-          <p class="slide-description">${slide.content}</p>
-          <div class="focus-areas">
-            <h4>Key Focus Areas:</h4>
-            <ul class="focus-list">
-              ${slide.focus_areas.map(area => `<li>${this.escapeHtml(area)}</li>`).join('')}
-            </ul>
-          </div>
-        `;
-        
-      case 'profile':
-        return `
-          <h2>${slide.title}</h2>
-          <p class="slide-description">${slide.content}</p>
-          <div class="profile-details">
-            <div class="profile-item">
-              <h4>${this.escapeHtml(slide.details.motivations)}</h4>
-              <p>${this.escapeHtml(slide.details.towards)}</p>
-              <p>${this.escapeHtml(slide.details.away_from)}</p>
-            </div>
-          </div>
-          <div class="insight-highlight">
-            <h4>Actionable Insight</h4>
-            <p>${this.escapeHtml(slide.details.insight)}</p>
-          </div>
-        `;
-        
-      case 'challenges':
-        return `
-          <h2>${slide.title}</h2>
-          <p class="slide-description">${slide.content}</p>
-          <div class="challenges-list">
-            ${slide.challenges.map(challenge => `
-              <div class="challenge-item">
-                <h4>${this.escapeHtml(challenge.type)}</h4>
-                <ul class="challenge-examples">
-                  ${challenge.examples.map(example => `<li>${this.escapeHtml(example)}</li>`).join('')}
-                </ul>
-              </div>
-            `).join('')}
-          </div>
-        `;
-        
-      case 'decisions':
-        return `
-          <h2>${slide.title}</h2>
-          <p class="slide-description">${slide.content}</p>
-          <div class="criteria-list">
-            ${slide.criteria.map(criterion => `
-              <div class="criteria-item">
-                <div class="criteria-content">
-                  <h4>${this.escapeHtml(criterion.type)}</h4>
-                  <p>${this.escapeHtml(criterion.description)}</p>
-                </div>
-              </div>
-            `).join('')}
-          </div>
-        `;
-        
-      case 'market':
-        return `
-          <h2>${slide.title}</h2>
-          <div class="market-status">
-            <div class="market-momentum">${this.escapeHtml(slide.content)}</div>
-            <p class="market-description">${this.escapeHtml(slide.description)}</p>
-            <div class="market-indicators">
-              <h4>Key Market Indicators:</h4>
-              <ul class="indicator-list">
-                ${slide.indicators.map(indicator => `<li>${this.escapeHtml(indicator)}</li>`).join('')}
-              </ul>
-            </div>
-          </div>
-        `;
-
-      case 'content_strategy':
-        return `
-          <h2>${slide.title}</h2>
-          <p class="slide-description">${slide.content}</p>
-          <ul class="purpose-list">
-            ${slide.purposes.map(purpose => `<li>${this.escapeHtml(purpose)}</li>`).join('')}
-          </ul>
-          <div class="strategy-highlight">
-            <h4>${this.escapeHtml(slide.strategy.name)}</h4>
-            <ul class="strategy-points">
-              ${slide.strategy.points.map(point => `<li>${this.escapeHtml(point)}</li>`).join('')}
-            </ul>
-          </div>
-        `;
-
-      case 'belief_content':
-        return `
-          <h2>${slide.title}</h2>
-          <div class="belief-grid">
-            ${slide.beliefs.map(belief => `
-              <div class="belief-card">
-                <h4>${this.escapeHtml(belief.belief)}</h4>
-                <p class="strategy-text"><strong>Strategy:</strong> ${this.escapeHtml(belief.strategy)}</p>
-                <p class="content-text"><strong>Content:</strong> ${this.escapeHtml(belief.content)}</p>
-              </div>
-            `).join('')}
-          </div>
-        `;
-
-      case 'content_pillars':
-        const longFormText = slide.formats.long_form.includes(':') ? 
-          slide.formats.long_form.split(': ')[1] : slide.formats.long_form;
-        const shortFormText = slide.formats.short_form.includes(':') ? 
-          slide.formats.short_form.split(': ')[1] : slide.formats.short_form;
-        
-        return `
-          <h2>${slide.title}</h2>
-          <div class="pillars-section">
-            <h4>${this.escapeHtml(slide.pillars.title)}</h4>
-            <ul class="pillars-list">
-              ${slide.pillars.items.map(item => `<li>${this.escapeHtml(item)}</li>`).join('')}
-            </ul>
-          </div>
-          <div class="formats-section">
-            <h4>${this.escapeHtml(slide.formats.title)}</h4>
-            <div class="format-item">
-              <p><strong>Long-Form (Weekly):</strong> ${this.escapeHtml(longFormText)}</p>
-              <p><strong>Short-Form (Daily):</strong> ${this.escapeHtml(shortFormText)}</p>
-            </div>
-          </div>
-        `;
-
-      case 'offer_strategy':
-        return `
-          <h2>${slide.title}</h2>
-          <p class="slide-description">${slide.content}</p>
-          <div class="approach-section">
-            <h4>${this.escapeHtml(slide.approach.name)}</h4>
-            <ul class="approach-steps">
-              ${slide.approach.steps.map(step => `<li>${this.escapeHtml(step)}</li>`).join('')}
-            </ul>
-          </div>
-          <div class="result-highlight">
-            <p>${this.escapeHtml(slide.result)}</p>
-          </div>
-        `;
-
-      case 'offer_funnel':
-        return `
-          <h2>${slide.title}</h2>
-          <div class="offers-grid">
-            ${slide.offers.map(offer => `
-              <div class="offer-card">
-                <h4>${this.escapeHtml(offer.name)}</h4>
-                <p class="offer-problem">${this.escapeHtml(offer.problem)}</p>
-                <p class="offer-format">${this.escapeHtml(offer.format)}</p>
-              </div>
-            `).join('')}
-          </div>
-        `;
-
-      case 'strategic_overlays':
-        return `
-          <h2>${slide.title}</h2>
-          <div class="requirements-section">
-            <h4>${this.escapeHtml(slide.requirements.title)}</h4>
-            <ul class="requirements-list">
-              ${slide.requirements.items.map(item => `<li>${this.escapeHtml(item)}</li>`).join('')}
-            </ul>
-          </div>
-          <div class="example-highlight">
-            <h4>Example:</h4>
-            <p>${this.escapeHtml(slide.example)}</p>
-          </div>
-        `;
-
-      case 'metrics':
-        return `
-          <h2>${slide.title}</h2>
-          <div class="metrics-grid">
-            ${slide.metrics.map(metric => `
-              <div class="metric-card">
-                <h4>${this.escapeHtml(metric.category)}</h4>
-                <ul class="metric-items">
-                  ${metric.items.map(item => `<li>${this.escapeHtml(item)}</li>`).join('')}
-                </ul>
-              </div>
-            `).join('')}
-          </div>
-        `;
-        
-      default:
-        return `<h2>${slide.title}</h2><p>${slide.content || ''}</p>`;
-    }
-  }
-  
-  escapeHtml(text) {
-    if (!text) return '';
-    const div = document.createElement('div');
-    div.textContent = text;
-    return div.innerHTML;
-  }
-  
-  renderIndicators() {
-    this.slideIndicators.innerHTML = '';
-    
-    for (let i = 0; i < this.totalSlides; i++) {
-      const indicator = document.createElement('div');
-      indicator.className = 'indicator';
-      indicator.setAttribute('data-slide', i);
-      
-      if (i === 0) {
-        indicator.classList.add('active');
-      }
-      
-      indicator.addEventListener('click', (e) => {
-        e.stopPropagation();
-        this.goToSlide(i);
-      });
-      this.slideIndicators.appendChild(indicator);
-    }
-  }
-  
-  setupEventListeners() {
-    // Button navigation
-    this.prevBtn.addEventListener('click', (e) => {
-      e.stopPropagation();
-      this.previousSlide();
-    });
-    this.nextBtn.addEventListener('click', (e) => {
-      e.stopPropagation();
-      this.nextSlide();
-    });
-    
-    // Keyboard navigation
-    document.addEventListener('keydown', (e) => {
-      switch (e.key) {
-        case 'ArrowLeft':
-          e.preventDefault();
-          this.previousSlide();
-          break;
-        case 'ArrowRight':
-        case ' ':
-          e.preventDefault();
-          this.nextSlide();
-          break;
-      }
-    });
-
-    // Click to advance
-    this.slideContainer.addEventListener('click', (e) => {
-      // Only advance if clicking on the slide container itself, not on buttons or other interactive elements
-      if (e.target === this.slideContainer || e.target.closest('.slide')) {
-        this.nextSlide();
-      }
-    });
-  }
-  
-  nextSlide() {
-    if (this.currentSlideIndex < this.totalSlides - 1) {
-      this.goToSlide(this.currentSlideIndex + 1);
-    }
-  }
-  
-  previousSlide() {
-    if (this.currentSlideIndex > 0) {
-      this.goToSlide(this.currentSlideIndex - 1);
-    }
-  }
-  
-  goToSlide(index) {
-    if (index >= 0 && index < this.totalSlides && index !== this.currentSlideIndex) {
-      // Remove active class from current slide
-      const currentSlide = document.querySelector('.slide.active');
-      if (currentSlide) {
-        currentSlide.classList.remove('active');
-        if (index < this.currentSlideIndex) {
-          currentSlide.classList.add('prev');
-        }
-        
-        // Remove prev class after transition
-        setTimeout(() => {
-          if (currentSlide) {
-            currentSlide.classList.remove('prev');
-          }
-        }, 300);
-      }
-      
-      // Update current slide index
-      this.currentSlideIndex = index;
-      
-      // Add active class to new slide
-      const newSlide = document.querySelector(`[data-slide="${index}"]`);
-      if (newSlide) {
-        newSlide.classList.add('active');
-      }
-      
-      this.updateDisplay();
-      this.updateProgress();
-      this.updateIndicators();
-    }
-  }
-  
-  updateDisplay() {
-    // Update slide counter
-    this.currentSlideEl.textContent = this.currentSlideIndex + 1;
-    this.totalSlidesEl.textContent = this.totalSlides;
-    
-    // Update button states
-    this.prevBtn.disabled = this.currentSlideIndex === 0;
-    this.nextBtn.disabled = this.currentSlideIndex === this.totalSlides - 1;
-  }
-  
-  updateProgress() {
-    const progress = ((this.currentSlideIndex + 1) / this.totalSlides) * 100;
-    this.progressFill.style.width = `${progress}%`;
-  }
-  
-  updateIndicators() {
-    // Remove active class from all indicators
-    document.querySelectorAll('.indicator').forEach(indicator => {
-      indicator.classList.remove('active');
-    });
-    
-    // Add active class to current indicator
-    const currentIndicator = document.querySelector(`.indicator[data-slide="${this.currentSlideIndex}"]`);
-    if (currentIndicator) {
-      currentIndicator.classList.add('active');
-    }
-  }
-}
-
-// Initialize the presentation when the DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
-  new SlidePresentation();
+
+    const appData = {
+        stats: {
+            tam: 799.6,
+            segment: 50000,
+            revenue: 6
+        },
+        painPoints: [
+            { label: 'Capital & Funding', value: 22, detail: "'I feel un-investable. I don\\'t know how to become someone people trust with money.'" },
+            { label: 'Experience Gaps', value: 19, detail: "'I feel like an imposter. My success in my career doesn\\'t count here, and I\\'ll look foolish.'" },
+            { label: 'Market Conditions', value: 18, detail: "'The rules have changed and the \\'gurus\\' are still using an old playbook. I don\\'t trust their advice.'" },
+            { label: 'Trust Deficit', value: 14, detail: "'I\\'ve been burned by the \\'honest\\' ones. Who can I possibly trust now?'" },
+            { label: 'Competition Overwhelm', value: 10, detail: "'I can\\'t quit my job, so how can I compete with people who do this full-time?'" },
+            { label: 'Analysis Paralysis', value: 9, detail: "'I\\'m terrified of making a catastrophic mistake that will set my family back years.'" },
+            { label: 'Personal Stress', value: 6, detail: "'This is straining my marriage and my mental health. The uncertainty is crushing.'" },
+            { label: 'Operational Challenges', value: 5, detail: "'I want the asset, not the tenants and toilets. I fear creating a new, worse job for myself.'" }
+        ],
+        competitors: [
+            { feature: 'Capital Access', avg: 1, ours: 5, detail: "Competitors offer vague, theoretical advice. We will provide a systematic 'Fundability Framework' and direct access to a capital network." },
+            { feature: 'Risk Sharing', avg: 1, ours: 5, detail: "No competitors share risk. Our 'Confidence & Credibility' guarantee aligns our success with the student's, a powerful differentiator." },
+            { feature: 'Guarantee Strength', avg: 2, ours: 5, detail: "Most guarantees are simple money-back offers. Ours guarantees competence and provides 1-on-1 expert review, a much higher value promise." },
+            { feature: 'Outcome Timeline', avg: 2, ours: 5, detail: "Competitors promise results in 12+ months. Our accelerated 6-month timeline is a major draw for ambitious professionals." }
+        ],
+        beliefLadder: [
+            { rung: 1, title: 'The Capital Barrier', oldBelief: "'I need $500K+ cash to be a player.'", newBelief: "'I can control institutional-quality assets by first making *myself* fundable, then leveraging a proven system.'" },
+            { rung: 2, title: 'The Market Barrier', oldBelief: "'The market is too tough for beginners right now.'", newBelief: "'Challenging markets create the best opportunities for investors with the right strategy and capital partners.'" },
+            { rung: 3, title: 'The Competence Barrier', oldBelief: "'I'll fail because I don't have a finance degree.'", newBelief: "'My analytical mind is a superpower when paired with a systematic deal-evaluation framework.'" },
+            { rung: 4, title: 'The Trust Barrier', oldBelief: "'Every educator is just selling a course.'", newBelief: "'A true accelerator guarantees my competence and provides expert validation, aligning their success with mine.'" }
+        ],
+        dealOS: [
+            { title: 'Fundability Framework™', goal: 'Make the student investable *before* they look for deals.', process: 'Students complete a "Fundability Scorecard," build a personal credibility deck, and learn to structure deals that attract capital. This module solves the #1 pain point head-on.' },
+            { title: 'Deal Flow Engine™', goal: 'Generate a consistent pipeline of qualified opportunities.', process: 'A system for building a "Broker Alliance," teaching students how to become a top broker\'s first call. This is supplemented with access to your network\'s off-market deal flow.' },
+            { title: 'Red Flag Framework™', goal: 'Eliminate analysis paralysis and mitigate risk.', process: 'A systematic, checklist-driven due diligence and underwriting process. It uses a go/no-go scoring system that forces a decision within a set timeframe, preventing endless analysis.' }
+        ],
+        guaranteeExamples: [
+            { title: "Part 1: The 1-on-1 Deal Review", scenario: "You complete the Accelerator but still feel hesitant about your first offer. You're worried you've missed something in your analysis.", solution: "You invoke the guarantee. You schedule a private 1-on-1 session with Curtis to review your deal. He'll go through your underwriting line-by-line, pressure-test your assumptions, and give you the clear 'go' or 'no-go' decision with his expert reasoning. You leave with absolute clarity and confidence." },
+            { title: "Part 2: The 'Blueprint-Backed' Credibility Seal", scenario: "You're ready to make an offer, but you're concerned brokers won't take you seriously as a new investor.", solution: "Because your offer was built using the Deal OS and reviewed by Curtis, you can submit it with the 'Blueprint-Backed' seal. This tells brokers and sellers that your offer has been vetted by an experienced professional, giving you instant credibility and a higher likelihood of being accepted." }
+        ],
+        funnel: [
+            { stage: 'Front-End Offer', price: '$37', title: 'The "90-Minute Deal Calculator"', promise: 'Confidently analyze any CRE listing in under 90 minutes.' },
+            { stage: 'Order Bump', price: '+$17', title: 'Debt Service Script Pack', promise: 'Get a term sheet from a local lender within 48 hours.' },
+            { stage: 'One-Time Offer 1', price: '$197', title: 'Off-Market Deal-Finding System', promise: 'Find deals that brokers never list publicly.' },
+            { stage: 'One-Time Offer 2', price: '$997', title: '"Numbers to LOI" Live Sprint', promise: 'Go from analysis to a submitted Letter of Intent in 4 weeks with personal feedback.' },
+            { stage: 'Core Offer', price: 'Application', title: 'First-Deal Accelerator', promise: 'Get your first deal funded and closed.' }
+        ],
+        contentPillars: [
+            { title: 'First-Deal Frameworks (40%)', purpose: 'Builds authority by teaching core, step-by-step processes. Directly addresses the "Knowledge Gap" pain point.', examples: ['5 Steps to Buying Your First Commercial Property (Beginner\'s Guide)', 'How to Analyze a Commercial Deal in Under 30 Minutes', 'The Ultimate Due Diligence Checklist for Your First Property'] },
+            { title: 'Real Deal Reveals (25%)', purpose: 'Builds trust through radical transparency. Showcasing actual deals (wins and losses) proves you are a practitioner, not a performer.', examples: ['How I Made $120K on One Vacancy: A Complete Deal Breakdown', 'My $50,000 Mistake: The Worst Deal I Ever Did & The Lesson It Taught Me', 'From Start to Finish: The True Story of My First 12-Unit Building'] },
+            { title: 'Capital & Funding Mastery (15%)', purpose: 'Directly targets the #1 pain point. This content attracts the most motivated prospects.', examples: ['3 Ways to Fund Your First Deal When Banks Say No', 'How to Raise Private Money for CRE (Without Feeling Like a Salesman)', 'The Truth About How Much Money You REALLY Need'] },
+            { title: 'Market Hot-Takes & Myth Busting (10%)', purpose: 'Drives engagement and shareability by providing timely, opinionated commentary that counters common (and often wrong) advice.', examples: ['Why the "CRE Crash" is a Lie (And Where the Real Opportunity Is)', 'The Cap Rate Myth That Costs Beginners Millions', 'Yes, Rates are 7%. Here\'s How to Cash Flow Anyway.'] },
+            { title: 'Lifestyle & Mindset (10%)', purpose: 'Humanizes the brand and makes you relatable. This content addresses the "Personal Stress" pain point.', examples: ['How I Manage a $50M Portfolio in 5 Hours a Week', 'The Mindset Shift from W-2 Employee to Real Estate Investor', 'From Analysis Paralysis to Your First Offer: A Mental Framework'] }
+        ]
+    };
+
+    const navLinks = document.querySelectorAll('#main-nav a');
+    const contentSections = document.querySelectorAll('.content-section');
+
+    function navigate(hash) {
+        if (!hash) hash = '#dashboard';
+        
+        navLinks.forEach(link => {
+            link.classList.toggle('active', link.hash === hash);
+        });
+
+        contentSections.forEach(section => {
+            section.classList.toggle('active', `#${section.id}` === hash);
+        });
+
+        if (hash === '#dashboard') animateStats();
+    }
+
+    navLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            const hash = e.currentTarget.hash;
+            window.location.hash = hash;
+            navigate(hash);
+        });
+    });
+
+    function animateValue(obj, start, end, duration, isFloat = false) {
+        let startTimestamp = null;
+        const step = (timestamp) => {
+            if (!startTimestamp) startTimestamp = timestamp;
+            const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+            let value = progress * (end - start) + start;
+            if (isFloat) {
+                obj.innerHTML = `$${value.toFixed(1)}M`;
+            } else if (end > 1000) {
+                 obj.innerHTML = `${Math.floor(value).toLocaleString()}`;
+            } else {
+                 obj.innerHTML = `$${Math.floor(value)}M+`;
+            }
+
+            if (progress < 1) {
+                window.requestAnimationFrame(step);
+            }
+        };
+        window.requestAnimationFrame(step);
+    }
+    
+    function animateStats(){
+        const tam = document.getElementById('stat-tam');
+        const segment = document.getElementById('stat-segment');
+        const revenue = document.getElementById('stat-revenue');
+        
+        animateValue(tam, 0, appData.stats.tam, 1500, true);
+        animateValue(segment, 0, appData.stats.segment, 1500);
+        animateValue(revenue, 0, appData.stats.revenue, 1500);
+    }
+
+    function renderPainPointChart() {
+        const ctx = document.getElementById('painPointChart').getContext('2d');
+        const chart = new Chart(ctx, {
+            type: 'doughnut',
+            data: {
+                labels: appData.painPoints.map(p => p.label),
+                datasets: [{
+                    label: 'Pain Point Frequency',
+                    data: appData.painPoints.map(p => p.value),
+                    backgroundColor: [
+                        '#1e3a8a', '#1e40af', '#1d4ed8', '#2563eb', 
+                        '#3b82f6', '#60a5fa', '#93c5fd', '#bfdbfe'
+                    ],
+                    borderColor: '#ffffff',
+                    borderWidth: 3,
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                        labels: {
+                            font: { size: 12 },
+                            color: '#475569',
+                            boxWidth: 15,
+                            padding: 15,
+                        }
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                let label = context.label || '';
+                                if (label) {
+                                    label += ': ';
+                                }
+                                if (context.parsed !== null) {
+                                    label += context.parsed + '%';
+                                }
+                                return label;
+                            }
+                        }
+                    }
+                },
+                cutout: '50%',
+                onClick: (event, elements) => {
+                    if (elements.length > 0) {
+                        const i = elements[0].index;
+                        const detail = appData.painPoints[i].detail;
+                        document.getElementById('painPointDetail').innerHTML = `<p class="text-slate-700 font-semibold italic">"${detail}"</p>`;
+                    }
+                }
+            }
+        });
+    }
+    
+    function renderCompetitorAnalysis() {
+        const buttonsContainer = document.getElementById('competitor-buttons');
+        const detailCard = document.getElementById('competitor-detail-card');
+
+        buttonsContainer.innerHTML = appData.competitors.map((item, index) => `
+            <button class="comp-btn border-2 border-slate-300 text-slate-600 font-semibold py-2 px-4 rounded-lg text-sm" data-index="${index}">
+                ${item.feature}
+            </button>
+        `).join('');
+
+        buttonsContainer.addEventListener('click', (e) => {
+            if (e.target.classList.contains('comp-btn')) {
+                const allBtns = buttonsContainer.querySelectorAll('.comp-btn');
+                allBtns.forEach(btn => btn.classList.remove('active'));
+                e.target.classList.add('active');
+                
+                const index = e.target.dataset.index;
+                const data = appData.competitors[index];
+
+                detailCard.innerHTML = `
+                    <div class="fade-in">
+                        <h3 class="font-bold text-xl text-slate-800 mb-3">${data.feature}</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div class="p-4 bg-red-50 border-l-4 border-red-500 rounded-r-lg">
+                                <h4 class="font-bold text-red-800">Industry Standard (Avg. Score: ${data.avg}/5)</h4>
+                                <p class="text-sm text-red-700 mt-1">${data.avg < 3 ? 'Generally weak and theoretical.' : 'Moderately addressed but lacks depth.'}</p>
+                            </div>
+                            <div class="p-4 bg-green-50 border-l-4 border-green-500 rounded-r-lg">
+                                <h4 class="font-bold text-green-800">Our Opportunity (Target Score: ${data.ours}/5)</h4>
+                                <p class="text-sm text-green-700 mt-1">${data.detail}</p>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }
+        });
+    }
+
+    function renderBeliefLadder() {
+        const container = document.getElementById('belief-ladder');
+        container.innerHTML = appData.beliefLadder.map(item => `
+            <div class="belief-rung bg-slate-50 border border-slate-200 p-4 rounded-lg hover:shadow-md hover:border-blue-300">
+                <div class="flex justify-between items-center">
+                    <h3 class="font-bold text-lg text-blue-900">${item.rung}. ${item.title}</h3>
+                    <span class="text-blue-700 transform transition-transform duration-300">▼</span>
+                </div>
+                <div class="details mt-4 pt-4 border-t border-slate-200">
+                    <p class="mb-2 text-red-600"><strong class="text-slate-700">Limiting Belief:</strong> <span class="italic">${item.oldBelief}</span></p>
+                    <p class="text-green-600"><strong class="text-slate-700">Empowering Belief:</strong> <strong class="font-semibold">${item.newBelief}</strong></p>
+                </div>
+            </div>
+        `).join('');
+        
+        container.addEventListener('click', e => {
+            const rung = e.target.closest('.belief-rung');
+            if (rung) {
+                 container.querySelectorAll('.belief-rung').forEach(r => {
+                    if (r !== rung) r.classList.remove('open');
+                });
+                rung.classList.toggle('open');
+            }
+        });
+    }
+
+    function renderDealOS() {
+        const container = document.getElementById('deal-os');
+        container.innerHTML = appData.dealOS.map(item => `
+            <div class="os-module bg-slate-50 border border-slate-200 p-6 rounded-lg hover:shadow-lg hover:border-blue-400">
+                <h3 class="font-extrabold text-xl text-blue-900 mb-3">${item.title}</h3>
+                <p class="text-slate-600 mb-4">${item.goal}</p>
+                 <div class="details mt-4 pt-4 border-t border-slate-200">
+                    <p class="text-sm text-slate-700">${item.process}</p>
+                 </div>
+            </div>
+        `).join('');
+        
+        container.addEventListener('click', e => {
+            const module = e.target.closest('.os-module');
+            if (module) {
+                module.classList.toggle('open');
+            }
+        });
+    }
+
+    function renderGuaranteeExamples() {
+        const container = document.getElementById('guarantee-examples');
+        container.innerHTML = appData.guaranteeExamples.map(item => `
+            <div class="bg-blue-700/50 p-4 rounded-lg">
+                <h4 class="font-bold text-lg">${item.title}</h4>
+                <p class="text-sm opacity-80 mt-1"><strong>Scenario:</strong> ${item.scenario}</p>
+                <p class="text-sm opacity-80 mt-2"><strong>Solution:</strong> ${item.solution}</p>
+            </div>
+        `).join('');
+    }
+    
+    function renderFunnel() {
+        const container = document.getElementById('funnel-stages');
+        container.innerHTML = appData.funnel.map((item, index) => `
+            <div class="p-4 rounded-lg ${index === appData.funnel.length - 1 ? 'bg-blue-100 border-blue-300' : 'bg-slate-100 border-slate-200'} border">
+                <div class="flex justify-between items-baseline">
+                    <h4 class="font-bold text-blue-900">${item.stage}: ${item.title}</h4>
+                    <span class="text-sm font-bold text-blue-800">${item.price}</span>
+                </div>
+                <p class="text-sm text-slate-600 mt-1">${item.promise}</p>
+            </div>
+            ${index < appData.funnel.length - 1 ? '<div class="text-center text-slate-400 font-bold text-2xl my-1">↓</div>' : ''}
+        `).join('');
+    }
+
+    function renderContentPillars() {
+        const container = document.getElementById('content-pillars-container');
+        container.innerHTML = appData.contentPillars.map(pillar => `
+            <div class="content-pillar bg-slate-50 border border-slate-200 p-4 rounded-lg hover:shadow-md hover:border-blue-300">
+                <div class="flex justify-between items-center">
+                    <h3 class="font-bold text-lg text-blue-900">${pillar.title}</h3>
+                    <span class="text-blue-700 transform transition-transform duration-300">▼</span>
+                </div>
+                <div class="details mt-4 pt-4 border-t border-slate-200 prose prose-sm max-w-none">
+                    <p><strong>Purpose:</strong> ${pillar.purpose}</p>
+                    <p><strong>Example Launch Titles:</strong></p>
+                    <ul>
+                        ${pillar.examples.map(ex => `<li>${ex}</li>`).join('')}
+                    </ul>
+                </div>
+            </div>
+        `).join('');
+        container.addEventListener('click', e => {
+            const pillar = e.target.closest('.content-pillar');
+            if (pillar) {
+                pillar.classList.toggle('open');
+            }
+        });
+    }
+
+    renderPainPointChart();
+    renderCompetitorAnalysis();
+    renderBeliefLadder();
+    renderDealOS();
+    renderGuaranteeExamples();
+    renderFunnel();
+    renderContentPillars();
+    
+    const initialHash = window.location.hash || '#dashboard';
+    navigate(initialHash);
+
 });
